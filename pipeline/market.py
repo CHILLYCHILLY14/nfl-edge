@@ -43,8 +43,8 @@ def solve(games: list[dict], cfg: dict) -> tuple[dict[str, float], float]:
     """
     rows_in = [g for g in games
                if (g.get("odds") or {}).get("spread_home") is not None
-               and g.get("home", {}).get("abbr") and g.get("away", {}).get("abbr")
-               and int(g.get("season_type") or 2) != 1]
+               and int(g.get("season_type") or 2) not in (1, 4)
+               and R.real_matchup(g)]
     if len(rows_in) < 8:
         return {}, float(cfg["model"]["home_field_fallback"])
 

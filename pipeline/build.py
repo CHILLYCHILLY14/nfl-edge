@@ -416,9 +416,18 @@ def price_game(g: dict, proj: dict, cfg: dict, conf: float, stale: bool,
 # Filters
 # --------------------------------------------------------------------------- #
 
-def apply_filters(cands: list[dict], cfg: dict, g: dict) -> list[dict]:
+def days_until(game_date: str | None, today: dt.date) -> int | None:
+    try:
+        return (dt.date.fromisoformat((game_date or "")[:10]) - today).days
+    except ValueError:
+        return None
+
+
+def apply_filters(cands: list[dict], cfg: dict, g: dict, today: dt.date | None = None) -> list[dict]:
     f = cfg["filters"]
     stype = int(g.get("season_type") or 2)
+    hold = int(f.get("bet_within_days") or 0)
+    out_days = days_until(g.get("date_utc"), today or dt.date.today())
     for c in cands:
         if stype == 1 and not f.get("bet_preseason", False):
             c["tier"] = "PASS"
@@ -435,6 +444,14 @@ def apply_filters(cands: list[dict], cfg: dict, g: dict) -> list[dict]:
         elif c["ev"] <= 0 and c["tier"] != "PASS":
             c["tier"] = "PASS"
             c["filtered"] = "negative expected value at this price"
+        # Priced now, staked later. Keeping the tier visible while withholding
+        # the stake is the honest version of "this looks good but the number
+        # will move five more times before kickoff".
+        if hold and out_days is not None and out_days > hold and c["tier"] != "PASS":
+            c["held"] = True
+            c["opens_in_days"] = out_days - hold
+            c["hold_note"] = (f"priced early — {out_days} days out; bets open "
+                              f"{hold} days before kickoff")
     return cands
 
 
@@ -626,6 +643,14 @@ def main() -> int:
                 if not g.get("completed")
                 and g.get("date_utc")
                 and (today - dt.timedelta(days=1)).isoformat() <= g["date_utc"][:10] <= horizon.isoformat()]
+    # Playoff fixtures appear on the schedule months early with TBD on both
+    # sides, and the Pro Bowl is played by two teams that do not exist. Pricing
+    # either produces a game card for a matchup nobody can bet.
+    placeholder = [g for g in upcoming if not R.real_matchup(g)
+                   or int(g.get("season_type") or 2) >= 4]
+    if placeholder:
+        print(f"   skipping {len(placeholder)} placeholder fixtures (TBD / Pro Bowl)")
+    upcoming = [g for g in upcoming if g not in placeholder]
 
     # 6. Extras: injuries, weather, news, stats.
     inj_feed, inj_by_game, wx_by_game, news_rows, team_stat_rows = {}, {}, {}, [], {}
@@ -713,7 +738,7 @@ def main() -> int:
         snaps = len(lines.get(g["game_id"]) or [])
         stale = snaps == 0
         move = store.line_move(lines, g["game_id"])
-        cands = apply_filters(price_game(g, proj, cfg, conf, stale, calib, move), cfg, g)
+        cands = apply_filters(price_game(g, proj, cfg, conf, stale, calib, move), cfg, g, today)
         for c in cands:
             c["projection"] = {k: v for k, v in proj.items() if k != "parts"}
         board.extend(cands)
@@ -745,6 +770,11 @@ def main() -> int:
     board = weekly_cap(correlation_guard(board, cfg), cfg)
     board.sort(key=lambda c: (M.TIER_RANK[c["tier"]], -c["edge"]))
     plays = sum(1 for c in board if c["tier"] != "PASS")
+    held = sum(1 for c in board if c.get("held"))
+    no_line = sum(1 for g in upcoming
+                  if (g.get("odds") or {}).get("spread_home") is None
+                  and (g.get("odds") or {}).get("ml_home") is None)
+    all_pre = bool(upcoming) and all(int(g.get("season_type") or 2) == 1 for g in upcoming)
     print(f"   priced {len(upcoming)} games -> {len(board)} market lines, {plays} actionable")
 
     # 9. Shadow book: record EVERY call, including the passes, then grade finals.
@@ -760,7 +790,7 @@ def main() -> int:
     opened = 0
     if not args.no_bet:
         for c in board:
-            if c["tier"] == "PASS":
+            if c["tier"] == "PASS" or c.get("held"):
                 continue
             bankroll = (starting if cfg["bankroll"]["size_off"] == "starting"
                         else ledger.bankroll_from(ledg, starting))
@@ -809,7 +839,11 @@ def main() -> int:
         "calendar": cal,
         "settings": cfg,
         "league_context": league_ctx,
-        "counts": {"board": len(board), "actionable": plays, "tracked_calls": len(shadow)},
+        "counts": {"board": len(board), "actionable": plays, "tracked_calls": len(shadow),
+                   "held": held, "upcoming_without_a_line": no_line,
+                   "upcoming": len(upcoming), "all_preseason": all_pre},
+        "horizon_days": int(cfg["data"]["lookahead_days"]),
+        "bet_within_days": int(cfg["filters"].get("bet_within_days") or 0),
     })
     # Everything the in-browser simulator needs to price an arbitrary matchup
     # with exactly the same maths the board uses.

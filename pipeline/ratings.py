@@ -45,6 +45,34 @@ import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+def league_teams() -> set[str]:
+    """
+    The 32 real clubs, from config/divisions.json.
+
+    This exists because ESPN's feeds contain things that look like teams and are
+    not. The Pro Bowl is played by "AFC" and "NFC", and it is a completed game
+    with a final score, so a naive ratings solve happily invents two extra teams
+    and rates them off one game. Playoff fixtures appear months early with "TBD"
+    on both sides. Neither belongs anywhere near a power rating, and neither is
+    obvious from the output -- an AFC row halfway down a ratings table is easy to
+    scroll straight past.
+    """
+    p = os.path.join(ROOT, "config", "divisions.json")
+    if not os.path.exists(p):
+        return set()
+    with open(p, encoding="utf-8") as fh:
+        return set((json.load(fh) or {}).get("teams") or {})
+
+
+def real_matchup(g: dict) -> bool:
+    """Both sides are actual NFL clubs (not TBD, not a conference all-star side)."""
+    known = league_teams()
+    if not known:
+        return True
+    return (g.get("home", {}).get("abbr") in known
+            and g.get("away", {}).get("abbr") in known)
+
+
 def load_win_totals() -> dict:
     p = os.path.join(ROOT, "config", "win_totals.json")
     if not os.path.exists(p):
@@ -161,6 +189,12 @@ def _played(games: list[dict], include_preseason: bool = False) -> list[dict]:
         if not (g.get("home", {}).get("abbr") and g.get("away", {}).get("abbr")):
             continue
         if not include_preseason and int(g.get("season_type") or 2) == 1:
+            continue
+        # Season type 4 is the Pro Bowl. It is a real completed game with a real
+        # score played by two teams that do not exist.
+        if int(g.get("season_type") or 2) >= 4:
+            continue
+        if not real_matchup(g):
             continue
         out.append(g)
     return out
