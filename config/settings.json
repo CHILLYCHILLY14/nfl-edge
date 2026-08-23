@@ -178,6 +178,8 @@
     "_max_bets_per_game_note": "Correlation guard. A team's moneyline and its spread are close to the same bet, so taking both is one position at double the variance Kelly assumed.",
     "max_plays_per_week": 6,
     "_max_plays_per_week_note": "Hard cap on how many bets one NFL week can produce, best edges first. A 16-game slate with a 2.5% threshold will happily qualify twenty plays; that is a spray, not a staking plan.",
+    "bet_within_days": 8,
+    "_bet_within_days_note": "Games further out than this are priced and displayed but not staked. Seeing an edge three weeks early is useful; betting into a market that thin is not, and the number will move several times before kickoff. The card shows the date the play opens.",
     "bet_preseason": false,
     "_bet_preseason_note": "Preseason games are priced and displayed but never tiered as a play. Starter snap counts, not team strength, decide preseason games, and no rating model sees the coach's snap plan.",
     "bet_postseason": true
@@ -193,7 +195,8 @@
       "numberfire",
       "teamrankings"
     ],
-    "lookahead_days": 14,
+    "lookahead_days": 24,
+    "_lookahead_note": "How far ahead games are priced. Set wide on purpose: books post Week 1 lines in August, and a 14-day window in late August sees nothing but preseason -- an empty board that looks broken and is not. Pricing early also captures the opening number, which is where closing line value comes from.",
     "lookback_days": 5,
     "news_limit": 40,
     "fetch_news": true,
