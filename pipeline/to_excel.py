@@ -95,6 +95,7 @@ def build(path: str) -> str:
     ratings = _read("ratings", [])
     games = _read("games", [])
     perf = _read("performance", {})
+    forecasts = _read("forecasts", [])
     weather = _read("weather", {})
     injuries = _read("injuries", {})
     cfg = meta.get("settings", {})
@@ -118,6 +119,7 @@ def build(path: str) -> str:
         ["Best Bets", "Every qualified play with its projection, edge and stake."],
         ["Full Board", "Every market priced this week, including the passes and the reason for each."],
         ["Tier Accuracy", "How BEST BET / GOOD / LEAN / PASS calls have actually performed."],
+        ["Game Predictions", "Every game the model projected, graded against the result — bet or no bet — with the market's number beside it."],
         ["Power Ratings", "Solved from results by ridge regression, with offence and defence split out."],
         ["Schedule & Results", "The full season, live scores, and the market line on each game."],
         ["Injuries", "The league injury report the model applied this run."],
@@ -196,6 +198,46 @@ def build(path: str) -> str:
            [[c.get("bucket"), c.get("n"), c.get("predicted"), c.get("actual"), c.get("gap")]
             for c in (perf.get("calibration") or [])],
            [20, 9, 11, 11, 9], [None, "0", pctf, pctf, "+0.0%;-0.0%"])
+
+    # ------------------------------------------------------- Game Predictions
+    ws = wb.create_sheet("Game Predictions")
+    fc = perf.get("game_forecasts") or {}
+    L = fc.get("latest_forecast") or {}
+    _title(ws, "Game Predictions",
+           "Every game the model priced, graded on what happened, whether or not a bet was placed. "
+           "Absolute error means nothing on its own -- the column that matters is the market's, "
+           "beside it. " + str(fc.get("verdict") or ""))
+    heads = [("Games graded", fc.get("graded")),
+             ("Margin error", L.get("margin_mae")),
+             ("Market margin error", L.get("market_margin_mae")),
+             ("Difference", L.get("margin_vs_market")),
+             ("Straight up", (L.get("straight_up") or {}).get("pct")),
+             ("Model side ATS", (L.get("against_the_spread") or {}).get("pct")),
+             ("Beat the market", (L.get("beat_market_margin") or {}).get("pct"))]
+    for j, (k, v) in enumerate(heads, start=1):
+        ws.cell(row=4, column=j, value=k).font = F_MUTED
+        c = ws.cell(row=5, column=j, value=v)
+        c.font = F_KPI
+        c.number_format = pctf if k in ("Straight up", "Model side ATS", "Beat the market") else "0.00"
+    rows = []
+    for r in forecasts:
+        last = r.get("latest") or {}
+        rows.append([(r.get("date") or "")[:10], r.get("week"), r.get("matchup"),
+                     last.get("model_margin"), last.get("market_spread"),
+                     last.get("model_total"), last.get("market_total"),
+                     r.get("actual_margin"), r.get("actual_total"),
+                     last.get("model_margin_ae"), last.get("market_margin_ae"),
+                     ("Yes" if last.get("su_correct") else "No") if "su_correct" in last else "",
+                     ("Yes" if last.get("ats_correct") else "No") if "ats_correct" in last else "",
+                     r.get("final_score")])
+    _table(ws, 7,
+           ["Date", "Wk", "Game", "Model margin", "Market spread", "Model total", "Market total",
+            "Actual margin", "Actual total", "Model error", "Market error", "Winner right?",
+            "Side covered?", "Final"],
+           rows, [12, 5, 16, 12, 12, 11, 11, 12, 11, 11, 11, 12, 12, 20],
+           [None, "0", None, "+0.0;-0.0", "+0.0;-0.0", "0.0", "0.0",
+            "+0;-0", "0", "0.00", "0.00", None, None, None],
+           name="tblForecasts")
 
     # ---------------------------------------------------------- Power Ratings
     ws = wb.create_sheet("Power Ratings")

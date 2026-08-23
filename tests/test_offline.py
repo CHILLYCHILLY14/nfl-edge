@@ -275,9 +275,13 @@ class TestRatings(unittest.TestCase):
         return games
 
     def test_recovers_known_ratings(self):
-        true = {f"T{i:02d}": v for i, v in enumerate(
+        # Real abbreviations, because the ratings solve now refuses to rate
+        # anything that is not one of the 32 clubs.
+        squad = ["KC", "BUF", "PHI", "BAL", "SF", "DET", "GB", "MIN",
+                 "NYJ", "CHI", "LV", "CAR", "TEN", "ARI", "NE", "WSH"]
+        true = dict(zip(squad,
             [7.5, 6.0, 4.5, 3.5, 2.5, 2.0, 1.0, 0.5, 0.0, -0.5, -1.0, -2.0,
-             -2.5, -3.5, -4.5, -6.0])}
+             -2.5, -3.5, -4.5, -6.0]))
         games = self._league(true, hfa=2.0, n_rounds=14)
         cfg = json.loads(json.dumps(CFG))
         cfg["ratings"]["recency_halflife_games"] = 999   # no decay for this test
@@ -301,12 +305,13 @@ class TestRatings(unittest.TestCase):
         self.assertLess(hfa, 4.0)
 
     def test_ratings_centre_on_zero(self):
-        true = {f"T{i}": i - 4 for i in range(8)}
+        true = {t: i - 4 for i, t in enumerate(
+            ["KC", "BUF", "PHI", "BAL", "SF", "DET", "GB", "MIN"])}
         solved, _ = R.solve_margin_ratings(self._league(true, 2.0), CFG)
         self.assertAlmostEqual(sum(solved.values()) / len(solved), 0.0, places=6)
 
     def test_preseason_games_excluded(self):
-        games = self._league({"A": 5, "B": -5}, 2.0, n_rounds=2)
+        games = self._league({"KC": 5, "BUF": -5}, 2.0, n_rounds=2)
         for g in games:
             g["season_type"] = 1
         solved, _ = R.solve_margin_ratings(games, CFG)
@@ -410,40 +415,40 @@ class TestTracker(unittest.TestCase):
 class TestStatsAndExplain(unittest.TestCase):
     def _games(self):
         return [{"completed": True, "season_type": 2, "date_utc": "2026-09-13T17:00:00Z",
-                 "home": {"abbr": "AAA"}, "away": {"abbr": "BBB"},
+                 "home": {"abbr": "KC"}, "away": {"abbr": "BUF"},
                  "home_score": 27, "away_score": 17,
                  "odds": {"spread_home": -3.0, "total": 44.0}}]
 
     def test_derived_stats(self):
         d = ST.derived(self._games())
-        self.assertEqual(d["AAA"]["record"], "1-0")
-        self.assertEqual(d["AAA"]["ppg"], 27.0)
-        self.assertEqual(d["BBB"]["margin"], -10.0)
+        self.assertEqual(d["KC"]["record"], "1-0")
+        self.assertEqual(d["KC"]["ppg"], 27.0)
+        self.assertEqual(d["BUF"]["margin"], -10.0)
 
     def test_ats_and_ou_records(self):
         f = R.ats_form(self._games())
-        self.assertEqual(f["AAA"]["season_ats"], "1-0-0")   # won by 10, laying 3
-        self.assertEqual(f["AAA"]["season_ou"], "0-0-1")    # 44 scored on a 44 total -> push
+        self.assertEqual(f["KC"]["season_ats"], "1-0-0")   # won by 10, laying 3
+        self.assertEqual(f["KC"]["season_ou"], "0-0-1")    # 44 scored on a 44 total -> push
 
     def test_factors_sum_to_the_model_line(self):
         parts = {"home_rating": 3.0, "away_rating": -1.0, "rating_diff": 4.0, "hfa": 1.9,
                  "rest_adj": 0.3, "travel_adj": 0.2, "manual_margin": 0.0,
                  "injury": {"margin_adj": -1.5, "home": {"points": 4.5, "items": [], "qb_out": True},
                             "away": {"points": 3.0, "items": [], "qb_out": False}}}
-        g = {"home": {"abbr": "AAA"}, "away": {"abbr": "BBB"}, "neutral": False}
+        g = {"home": {"abbr": "KC"}, "away": {"abbr": "BUF"}, "neutral": False}
         rows = explain.factors(g, parts)
         self.assertAlmostEqual(sum(r["points"] for r in rows), 4.0 + 1.9 + 0.3 + 0.2 - 1.5, places=6)
         self.assertTrue(all(r.get("note") for r in rows))
 
     def test_narrative_mentions_both_teams(self):
-        g = {"home": {"abbr": "AAA"}, "away": {"abbr": "BBB"}, "neutral": False}
+        g = {"home": {"abbr": "KC"}, "away": {"abbr": "BUF"}, "neutral": False}
         ev = explain.evidence(g, ST.derived(self._games()), R.ats_form(self._games()),
                               ST.league_context(ST.derived(self._games())),
-                              {"AAA": 2.0, "BBB": -1.0}, {})
+                              {"KC": 2.0, "BUF": -1.0}, {})
         text = explain.narrative(g, {"mu": 3.0, "proj_home_pts": 24, "proj_away_pts": 21,
                                      "market_mu": 2.0, "gap": 0.5, "gap_raw": 1.0}, ev, None)
-        self.assertIn("AAA", text)
-        self.assertIn("BBB", text)
+        self.assertIn("KC", text)
+        self.assertIn("BUF", text)
 
 
 class TestPipelineWiring(unittest.TestCase):
@@ -465,9 +470,9 @@ class TestPipelineWiring(unittest.TestCase):
     def test_rest_days_from_schedule(self):
         games = [
             {"game_id": "1", "date_utc": "2026-09-13T17:00:00Z", "completed": True,
-             "home": {"abbr": "AAA"}, "away": {"abbr": "BBB"}},
+             "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}},
             {"game_id": "2", "date_utc": "2026-09-17T17:00:00Z", "completed": False,
-             "home": {"abbr": "AAA"}, "away": {"abbr": "CCC"}},
+             "home": {"abbr": "KC"}, "away": {"abbr": "PHI"}},
         ]
         rests = B.rest_days(games)
         self.assertEqual(rests["2:home"], 4)   # Thursday off a Sunday
@@ -592,7 +597,7 @@ class TestMarketRatings(unittest.TestCase):
 
     def test_recovers_the_spreads_it_was_given(self):
         from pipeline import market as MKT
-        true = {"AAA": 4.0, "BBB": 1.0, "CCC": -1.0, "DDD": -4.0}
+        true = {"KC": 4.0, "BUF": 1.0, "PHI": -1.0, "NYJ": -4.0}
         solved, hfa = MKT.solve(self._games(true), CFG)
         self.assertEqual(sorted(true, key=lambda t: -true[t]),
                          sorted(solved, key=lambda t: -solved[t]))
@@ -600,16 +605,16 @@ class TestMarketRatings(unittest.TestCase):
 
     def test_prior_fades_as_teams_play(self):
         from pipeline import market as MKT
-        model_prior = {"AAA": 0.0, "BBB": 0.0}
-        market = {"AAA": 4.0, "BBB": -4.0}
+        model_prior = {"KC": 0.0, "BUF": 0.0}
+        market = {"KC": 4.0, "BUF": -4.0}
         fresh, _ = MKT.blend_prior(model_prior, market, {}, CFG)
-        late, _ = MKT.blend_prior(model_prior, market, {"AAA": 12, "BBB": 12}, CFG)
-        self.assertGreater(fresh["AAA"], late["AAA"])
-        self.assertAlmostEqual(late["AAA"], 0.0, places=6)
+        late, _ = MKT.blend_prior(model_prior, market, {"KC": 12, "BUF": 12}, CFG)
+        self.assertGreater(fresh["KC"], late["KC"])
+        self.assertAlmostEqual(late["KC"], 0.0, places=6)
 
     def test_preseason_spreads_ignored(self):
         from pipeline import market as MKT
-        games = self._games({"AAA": 4.0, "BBB": -4.0})
+        games = self._games({"KC": 4.0, "BUF": -4.0})
         for g in games:
             g["season_type"] = 1
         self.assertEqual(MKT.solve(games, CFG)[0], {})
@@ -661,15 +666,15 @@ class TestPerTeamHomeField(unittest.TestCase):
         games = [{
             "game_id": str(i), "completed": True, "season_type": 2,
             "date_utc": f"2026-10-{11+i:02d}T17:00:00Z", "neutral": False,
-            "home": {"abbr": "AAA"}, "away": {"abbr": "BBB"},
+            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"},
             "home_score": 30, "away_score": 10,
             "odds": {"spread_home": -3.0, "total": 44.0},
         } for i in range(6)]
         out = R.per_team_home_field(games, 1.9, CFG)
         # Six huge home wins is not enough evidence to move far from the league
         # number. That restraint is the entire job of the shrinkage constant.
-        self.assertIn("AAA", out)
-        self.assertLess(abs(out["AAA"] - 1.9), 2.5)
+        self.assertIn("KC", out)
+        self.assertLess(abs(out["KC"] - 1.9), 2.5)
 
     def test_disabled_returns_nothing(self):
         cfg = json.loads(json.dumps(CFG))
@@ -738,3 +743,163 @@ class TestSimulatorPayload(unittest.TestCase):
         d = self._load()
         self.assertEqual({int(k): v for k, v in d["key_numbers"].items()},
                          M.KEY_NUMBER_BUMPS)
+
+
+class TestPlaceholderFixtures(unittest.TestCase):
+    """ESPN's feeds contain things that look like teams and are not."""
+
+    def _game(self, home, away, stype=2, completed=True):
+        return {"game_id": "1", "completed": completed, "season_type": stype,
+                "date_utc": "2027-02-01T17:00:00Z", "neutral": True,
+                "home_score": 35, "away_score": 30,
+                "home": {"abbr": home}, "away": {"abbr": away},
+                "odds": {"spread_home": -3.0, "total": 60.0}}
+
+    def test_pro_bowl_never_becomes_two_teams(self):
+        solved, _ = R.solve_margin_ratings([self._game("AFC", "NFC", stype=4)], CFG)
+        self.assertNotIn("AFC", solved)
+        self.assertNotIn("NFC", solved)
+
+    def test_conference_sides_rejected_even_at_a_normal_season_type(self):
+        self.assertFalse(R.real_matchup(self._game("AFC", "NFC")))
+        self.assertFalse(R.real_matchup(self._game("KC", "TBD")))
+        self.assertTrue(R.real_matchup(self._game("KC", "BUF")))
+
+    def test_market_solve_ignores_placeholders(self):
+        from pipeline import market as MKT
+        games = [self._game("AFC", "NFC", stype=4, completed=False) for _ in range(20)]
+        self.assertEqual(MKT.solve(games, CFG)[0], {})
+
+    def test_league_has_exactly_32_clubs(self):
+        # WAS is carried as an alias of WSH, so the file holds 33 keys for 32 teams.
+        teams = R.league_teams()
+        self.assertEqual(len(teams - {"WAS"}), 32)
+
+
+class TestBetHorizon(unittest.TestCase):
+    def test_far_out_plays_are_priced_but_held(self):
+        today = dt.date(2026, 9, 1)
+        g = {"season_type": 2, "date_utc": "2026-09-27T17:00:00Z"}
+        cands = [{"tier": "GOOD", "price": -110, "ev": 0.02}]
+        out = B.apply_filters(cands, CFG, g, today)
+        self.assertEqual(out[0]["tier"], "GOOD")     # still shown
+        self.assertTrue(out[0]["held"])              # but not staked
+        self.assertIn("bets open", out[0]["hold_note"])
+
+    def test_near_plays_are_not_held(self):
+        today = dt.date(2026, 9, 1)
+        g = {"season_type": 2, "date_utc": "2026-09-06T17:00:00Z"}
+        out = B.apply_filters([{"tier": "GOOD", "price": -110, "ev": 0.02}], CFG, g, today)
+        self.assertFalse(out[0].get("held"))
+
+    def test_days_until(self):
+        self.assertEqual(B.days_until("2026-09-10T00:20Z", dt.date(2026, 9, 1)), 9)
+        self.assertIsNone(B.days_until(None, dt.date(2026, 9, 1)))
+
+
+class TestForecastLog(unittest.TestCase):
+    """Predictions are graded against results whether or not a bet was placed."""
+
+    def _game(self, gid="1", spread=-3.0, total=44.0):
+        return {"game_id": gid, "date_utc": "2026-09-13T17:00:00Z", "week": 1,
+                "season_type": 2, "home": {"abbr": "KC"}, "away": {"abbr": "BUF"},
+                "odds": {"spread_home": spread, "total": total}}
+
+    def _proj(self, mu=5.0, total=47.0):
+        return {"mu": mu, "mu_raw": mu, "proj_total": total,
+                "score_home": 26, "score_away": 21}
+
+    def test_first_forecast_is_frozen_latest_moves(self):
+        from pipeline import forecast as F
+        log = {}
+        self.assertTrue(F.record(log, self._game(), self._proj(mu=5.0), 0.62))
+        self.assertFalse(F.record(log, self._game(), self._proj(mu=1.0), 0.53))
+        row = log["1"]
+        self.assertEqual(row["first"]["model_margin"], 5.0)
+        self.assertEqual(row["latest"]["model_margin"], 1.0)
+        self.assertEqual(row["runs"], 2)
+
+    def test_grades_and_measures_against_the_market(self):
+        from pipeline import forecast as F
+        log = {}
+        # Model says home by 5, market says home by 3, home wins by 4.
+        F.record(log, self._game(spread=-3.0), self._proj(mu=5.0), 0.62)
+        final = {"1": {"completed": True, "home_score": 24, "away_score": 20,
+                       "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}}
+        self.assertEqual(F.grade(log, final), 1)
+        snap = log["1"]["latest"]
+        self.assertEqual(snap["model_margin_ae"], 1.0)     # |5 - 4|
+        self.assertEqual(snap["market_margin_ae"], 1.0)    # |3 - 4|
+        self.assertTrue(snap["su_correct"])
+        # Model leaned home past the number; home won by 4 and covered -3.
+        self.assertTrue(snap["ats_correct"])
+
+    def test_ats_call_recorded_when_model_is_wrong(self):
+        from pipeline import forecast as F
+        log = {}
+        F.record(log, self._game(spread=-3.0), self._proj(mu=8.0), 0.7)
+        F.grade(log, {"1": {"completed": True, "home_score": 20, "away_score": 19,
+                            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        snap = log["1"]["latest"]
+        self.assertFalse(snap["ats_correct"])           # leaned home, home did not cover
+        self.assertTrue(snap["su_correct"])             # but did pick the winner
+        self.assertFalse(snap["beat_market_margin"])    # |8-1| worse than |3-1|
+
+    def test_no_ats_call_when_model_agrees_with_the_number(self):
+        from pipeline import forecast as F
+        log = {}
+        F.record(log, self._game(spread=-3.0), self._proj(mu=3.1), 0.58)
+        F.grade(log, {"1": {"completed": True, "home_score": 27, "away_score": 20,
+                            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        self.assertNotIn("ats_correct", log["1"]["latest"])
+
+    def test_totals_are_measured_too(self):
+        from pipeline import forecast as F
+        log = {}
+        F.record(log, self._game(total=44.0), self._proj(total=50.0), 0.5)
+        F.grade(log, {"1": {"completed": True, "home_score": 28, "away_score": 24,
+                            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        snap = log["1"]["latest"]           # actual total 52
+        self.assertEqual(snap["model_total_ae"], 2.0)
+        self.assertEqual(snap["market_total_ae"], 8.0)
+        self.assertTrue(snap["beat_market_total"])
+        self.assertTrue(snap["total_correct"])
+
+    def test_a_graded_forecast_is_never_rewritten(self):
+        from pipeline import forecast as F
+        log = {}
+        F.record(log, self._game(), self._proj(mu=5.0), 0.6)
+        F.grade(log, {"1": {"completed": True, "home_score": 24, "away_score": 20,
+                            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        F.record(log, self._game(), self._proj(mu=-99.0), 0.1)
+        self.assertEqual(log["1"]["latest"]["model_margin"], 5.0)
+
+    def test_report_verdict_is_honest_about_thin_data(self):
+        from pipeline import forecast as F
+        log = {}
+        F.record(log, self._game(), self._proj(), 0.6)
+        F.grade(log, {"1": {"completed": True, "home_score": 24, "away_score": 20,
+                            "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        rep = F.report(log)
+        self.assertEqual(rep["graded"], 1)
+        self.assertIn("Only 1 graded game", rep["verdict"])
+
+    def test_report_calls_out_a_model_losing_to_the_market(self):
+        from pipeline import forecast as F
+        log = {}
+        for i in range(24):
+            g = self._game(gid=str(i), spread=-3.0)
+            F.record(log, g, self._proj(mu=15.0), 0.8)     # wildly off
+            F.grade(log, {str(i): {"completed": True, "home_score": 24, "away_score": 21,
+                                   "home": {"abbr": "KC"}, "away": {"abbr": "BUF"}}})
+        rep = F.report(log)
+        self.assertLess(rep["latest_forecast"]["margin_vs_market"], 0)
+        self.assertIn("market is predicting these games better", rep["verdict"])
+
+    def test_no_line_means_no_forecast(self):
+        from pipeline import forecast as F
+        log = {}
+        g = self._game()
+        g["odds"] = {}
+        self.assertFalse(F.record(log, g, self._proj(), 0.5))
+        self.assertEqual(log, {})

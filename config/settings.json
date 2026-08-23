@@ -195,6 +195,10 @@
       "numberfire",
       "teamrankings"
     ],
+    "full_season_odds_sweep": true,
+    "_sweep_note": "Re-fetch the whole remaining season every run, not just the next few weeks. Books post lines for all 18 regular-season weeks in August, so this is real data sitting there unused -- and sweeping it every run is what captures the opening number and every move since, for the whole season rather than the fortnight in front of us. Costs about nine HTTP requests.",
+    "outlook": true,
+    "_outlook_note": "Project every future game that has a posted line, however far out, and publish it as a look-ahead view. These are NOT tracked in the shadow book and NOT staked: a call frozen four months early would be graded against a line that moved twenty times, which would corrupt the accuracy record rather than extend it.",
     "lookahead_days": 24,
     "_lookahead_note": "How far ahead games are priced. Set wide on purpose: books post Week 1 lines in August, and a 14-day window in late August sees nothing but preseason -- an empty board that looks broken and is not. Pricing early also captures the opening number, which is where closing line value comes from.",
     "lookback_days": 5,

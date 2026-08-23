@@ -24,7 +24,8 @@ import math
 import os
 import sys
 
-from . import calibrate, espn, explain, injuries as INJ, ledger, market as MKT, model as M
+from . import calibrate, espn, explain, forecast, injuries as INJ, ledger
+from . import market as MKT, model as M
 from . import ratings as R, stats as ST, store, tracker, weather as WX
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -586,8 +587,15 @@ def main() -> int:
         fresh = espn.fetch_range(dt.date(season, 7, 25), dt.date(season + 1, 2, 20), prio)
     else:
         lo = today - dt.timedelta(days=int(cfg["data"]["lookback_days"]))
-        hi = today + dt.timedelta(days=int(cfg["data"]["lookahead_days"]))
-        print(f"-- rolling fetch {lo} .. {hi}")
+        # Sweeping the whole remaining season costs about nine requests and is
+        # what keeps every future week's line current instead of frozen at
+        # whatever it was during the one backfill.
+        if cfg["data"].get("full_season_odds_sweep", True):
+            hi = dt.date(season + 1, 2, 20)
+            print(f"-- season sweep {lo} .. {hi}")
+        else:
+            hi = today + dt.timedelta(days=int(cfg["data"]["lookahead_days"]))
+            print(f"-- rolling fetch {lo} .. {hi}")
         fresh = espn.fetch_range(lo, hi, prio)
     games = merge_games(cache, fresh)
     store.save(f"games_{season}.json", games)
@@ -703,13 +711,19 @@ def main() -> int:
             print(f"   news: {len(news_rows)} articles")
 
         if cfg["data"].get("fetch_stats", True):
+            stats_season = season
             if args.offline:
                 team_stat_rows = feeds.get("team_stats") or {}
             else:
                 raw_stats = espn._try(lambda: espn.team_stats(season, 2), {}, "team stats")
                 if not raw_stats or all(not v for v in raw_stats.values()):
+                    # Before Week 1 there are no current-season statistics to
+                    # have. Last season's are real and useful; the site says
+                    # which year it is looking at rather than implying they are
+                    # this year's.
                     raw_stats = espn._try(lambda: espn.team_stats(prior_season, 2), {},
                                           "team stats (prior)")
+                    stats_season = prior_season
                 team_stat_rows = ST.tidy_espn(raw_stats)
             print(f"   team stats: {len(team_stat_rows)} teams")
 
@@ -767,6 +781,61 @@ def main() -> int:
             "line_move": store.line_move(lines, g["game_id"]),
         })
 
+    # ---- Look-ahead: every future game that already has a posted line ------ #
+    # Books put all 18 regular-season weeks up in August. Projecting them costs
+    # nothing and answers the question the board cannot: what does the model
+    # make of Week 11 right now. Deliberately NOT tracked and NOT staked --
+    # freezing a call four months early would grade it against a line that moved
+    # twenty times since, which corrupts the accuracy record rather than
+    # extending it.
+    outlook: list[dict] = []
+    if cfg["data"].get("outlook", True):
+        board_ids = {g["game_id"] for g in upcoming}
+        future = [g for g in games
+                  if not g.get("completed") and g.get("date_utc")
+                  and g["date_utc"][:10] >= today.isoformat()
+                  and R.real_matchup(g) and int(g.get("season_type") or 2) < 4
+                  and ((g.get("odds") or {}).get("spread_home") is not None
+                       or (g.get("odds") or {}).get("ml_home") is not None)]
+        for g in future:
+            proj = project(g, rat, hfa, score_rat, league_pts, home_bump, rests, ovr, cfg,
+                           inj_by_game, wx_by_game, venues, team_hfa, divisions)
+            conf = M.confidence_score(played.get(g["home"]["abbr"], 0),
+                                      played.get(g["away"]["abbr"], 0), True, cfg,
+                                      int(g.get("season_type") or 2))
+            cands = price_game(g, proj, cfg, conf, stale=False, calib=calib,
+                               move=store.line_move(lines, g["game_id"]))
+            best = min((c for c in cands if c["tier"] != "PASS"),
+                       key=lambda c: (M.TIER_RANK[c["tier"]], -c["edge"]), default=None)
+            o = g.get("odds") or {}
+            on_board = g["game_id"] in board_ids
+            outlook.append({
+                "game_id": g["game_id"], "date": g.get("date_utc"),
+                "week": g.get("week"), "season_type": g.get("season_type"),
+                "away": g["away"]["abbr"], "home": g["home"]["abbr"],
+                "market_spread": o.get("spread_home"), "market_total": o.get("total"),
+                "ml_home": o.get("ml_home"), "ml_away": o.get("ml_away"),
+                "book": o.get("book"),
+                "model_spread": (None if proj.get("mu") is None else round(-proj["mu"], 1)),
+                "model_total": proj.get("proj_total"),
+                "score_home": proj.get("score_home"), "score_away": proj.get("score_away"),
+                "gap": proj.get("gap"), "total_gap": proj.get("total_gap"),
+                "confidence": conf,
+                "preview_pick": (best or {}).get("pick"),
+                "preview_tier": (best or {}).get("tier"),
+                "preview_edge": (best or {}).get("edge"),
+                "on_board": on_board,
+                # Say plainly what this projection could NOT include, rather than
+                # letting a bare number imply more than it knows.
+                "has_injuries": bool(inj_by_game.get(g["game_id"])),
+                "has_weather": bool((wx_by_game.get(g["game_id"]) or {}).get("forecast")),
+                "line_move": store.line_move(lines, g["game_id"]),
+            })
+        outlook.sort(key=lambda r: (r.get("date") or ""))
+        weeks_covered = len({(r["season_type"], r["week"]) for r in outlook})
+        print(f"   outlook: {len(outlook)} future games with a posted line, "
+              f"across {weeks_covered} weeks")
+
     board = weekly_cap(correlation_guard(board, cfg), cfg)
     board.sort(key=lambda c: (M.TIER_RANK[c["tier"]], -c["edge"]))
     plays = sum(1 for c in board if c["tier"] != "PASS")
@@ -777,7 +846,28 @@ def main() -> int:
     all_pre = bool(upcoming) and all(int(g.get("season_type") or 2) == 1 for g in upcoming)
     print(f"   priced {len(upcoming)} games -> {len(board)} market lines, {plays} actionable")
 
-    # 9. Shadow book: record EVERY call, including the passes, then grade finals.
+    # 9. Forecast log: what the model said about each game, bet or no bet.
+    fc_log = store.load("forecasts.json", {})
+    fc_new = 0
+    for g in upcoming:
+        cands = [c for c in board if c["game_id"] == g["game_id"]]
+        if not cands:
+            continue
+        proj = cands[0].get("projection") or {}
+        p_home = next((c["model_prob"] for c in cands
+                       if c["market"] == "ML" and c["side"] == "home"), None)
+        if forecast.record(fc_log, g, proj, p_home):
+            fc_new += 1
+    games_by_id_all = {g["game_id"]: g for g in games}
+    fc_graded = forecast.grade(fc_log, games_by_id_all)
+    store.save("forecasts.json", fc_log)
+    fc_report = forecast.report(fc_log)
+    print(f"   forecasts: +{fc_new} new, {fc_graded} graded, {len(fc_log)} logged"
+          + (f" | margin error {fc_report['latest_forecast']['margin_mae']} vs market "
+             f"{fc_report['latest_forecast']['market_margin_mae']}"
+             if fc_report["graded"] else ""))
+
+    # 10. Shadow book: record EVERY call, including the passes, then grade finals.
     shadow = shadow_now
     added = tracker.record(shadow, board)
     games_by_id = {g["game_id"]: g for g in games}
@@ -785,7 +875,7 @@ def main() -> int:
     store.save("shadow.json", shadow)
     print(f"   shadow book: +{added} new calls, {shadow_graded} graded, {len(shadow)} tracked")
 
-    # 10. Log qualified bets, then grade finals.
+    # 11. Log qualified bets, then grade finals.
     starting = float(cfg["bankroll"]["starting"])
     opened = 0
     if not args.no_bet:
@@ -800,7 +890,7 @@ def main() -> int:
     store.save("ledger.json", ledg)
     print(f"   ledger: +{opened} new, {graded} graded, {len(ledg)} total")
 
-    # 11. Power rankings, with movement since the last run.
+    # 12. Power rankings, with movement since the last run.
     prev_ranks = store.load("rank_history.json", {})
     rank_rows = ST.rank_table(rat, score_rat, derived, form,
                               previous=prev_ranks.get("latest"),
@@ -811,7 +901,7 @@ def main() -> int:
         "previous": prev_ranks.get("latest") or {},
     })
 
-    # 12. Emit the site payload.
+    # 13. Emit the site payload.
     os.makedirs(SITE_DATA, exist_ok=True)
 
     def write(name: str, payload) -> None:
@@ -843,6 +933,7 @@ def main() -> int:
                    "held": held, "upcoming_without_a_line": no_line,
                    "upcoming": len(upcoming), "all_preseason": all_pre},
         "horizon_days": int(cfg["data"]["lookahead_days"]),
+        "weather_forecast_days": int((cfg.get("weather") or {}).get("forecast_days", 16)),
         "bet_within_days": int(cfg["filters"].get("bet_within_days") or 0),
     })
     # Everything the in-browser simulator needs to price an arbitrary matchup
@@ -872,15 +963,19 @@ def main() -> int:
                                     if g["home"]["abbr"] == t), None)}
                   for t in sorted(rat)},
     })
+    write("outlook.json", outlook)
     write("board.json", [{**c, "line_move": store.line_move(lines, c["game_id"])} for c in board])
     write("games_detail.json", game_cards)
     write("ledger.json", sorted(ledg.values(), key=lambda b: (b.get("game_date") or ""), reverse=True))
     write("summary.json", {**summary, "calibration": ledger.calibration(ledg)})
-    write("performance.json", perf)
+    write("performance.json", {**perf, "game_forecasts": fc_report})
+    write("forecasts.json", sorted(fc_log.values(),
+                                   key=lambda r: (r.get("date") or ""), reverse=True))
     write("ratings.json", rank_rows)
     write("injuries.json", {k: v for k, v in inj_feed.items() if not k.startswith("name:")})
     write("news.json", news_rows)
-    write("team_stats.json", {"espn": team_stat_rows, "derived": derived, "league": league_ctx})
+    write("team_stats.json", {"espn": team_stat_rows, "derived": derived, "league": league_ctx,
+                              "espn_season": locals().get("stats_season", season)})
     write("weather.json", wx_by_game)
     write("games.json", [{
         "game_id": g["game_id"], "date": g.get("date_utc"), "week": g.get("week"),

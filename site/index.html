@@ -290,12 +290,12 @@ const DATA_BASE = (() => {
 })();
 const FILES = ["meta","summary","board","games_detail","games","ledger",
                "performance","ratings","injuries","news","team_stats","weather",
-               "simulator"];
+               "simulator","outlook"];
 
 const S = {
   meta:null, summary:null, board:[], games_detail:[], games:[], ledger:[],
   performance:null, ratings:[], injuries:{}, news:[], team_stats:null, weather:{},
-  simulator:null,
+  simulator:null, outlook:[],
   sim:{away:null, home:null, neutral:false, spread:"", total:"",
        adjAway:0, adjHome:0, wxTotal:0},
   tab:"best",
@@ -404,6 +404,17 @@ function buildWeekPicker(){
     });
     const k = selKey();
     if (k) sel.value = k;
+    // A key the calendar does not contain leaves the <select> showing nothing
+    // at all, which reads as broken. Fall back to whatever week we are actually
+    // displaying, and failing that the first week of the season.
+    if (!sel.value){
+      const now = currentWeekKey();
+      sel.value = (now && cal.some(c => `${c.season_type}:${c.week}` === now))
+        ? now : `${cal[0].season_type}:${cal[0].week}`;
+      const [st, wk] = sel.value.split(":");
+      S.sel.seasonType = Number(st);
+      S.sel.week = Number(wk);
+    }
   }
   $("#datesel").value = S.sel.date || "";
   const e = selEntry();
@@ -722,33 +733,88 @@ function renderGames(){
   const host = $("#p-games");
   host.innerHTML = "";
   host.appendChild(el("div","panel-head",
-    `<div><h2>Games &amp; results</h2><p>The full schedule for the selected week: kickoff, market line, and the final score once it lands. Change the week or pick a date above to move anywhere in the season.</p></div>`));
+    `<div><h2>Schedule, odds &amp; model line</h2><p>Every game in the selected week, with the market's posted numbers and the model's own line beside them. Books put all eighteen regular-season weeks up in August, so this works months ahead — use the Week dropdown to look anywhere in the season.</p></div>`));
+
+  const byId = {};
+  (S.outlook||[]).forEach(r => { byId[r.game_id] = r; });
 
   const rows = (S.games||[]).filter(inSelection)
     .sort((a,b) => String(a.date).localeCompare(String(b.date)));
+
+  const withLine = rows.filter(g => (g.odds||{}).spread_home != null).length;
+  const projected = rows.filter(g => byId[g.game_id]).length;
+  if (rows.length){
+    host.appendChild(el("div","note",
+      `<b>${withLine} of ${rows.length}</b> games this week have a line posted, and the model has a projection for <b>${projected}</b>.` +
+      (projected < rows.length
+        ? ` The rest are on the schedule but nothing has been priced yet — books post those closer to kickoff, and there is nothing to project against until they do.`
+        : ``) +
+      ` Anything more than about two weeks out has <b>no injury or weather adjustment in it</b>, because neither exists that far ahead. The column marked <span class="pill">adj</span> tells you which projections do.`));
+  }
+
+  const f = el("div","filters");
+  [["date","By kickoff"],["gap","Biggest model gap"],["total_gap","Biggest total gap"]].forEach(([v,l]) => {
+    const b = el("button","chipbtn",esc(l));
+    b.setAttribute("aria-pressed", (S.filters.gamesSort||"date")===v);
+    b.onclick = () => { S.filters.gamesSort = v; renderGames(); };
+    f.appendChild(b);
+  });
+  host.appendChild(f);
+
+  const sortKey = S.filters.gamesSort || "date";
+  if (sortKey !== "date"){
+    rows.sort((a,b) => {
+      const av = Math.abs((byId[a.game_id]||{})[sortKey] ?? -99);
+      const bv = Math.abs((byId[b.game_id]||{})[sortKey] ?? -99);
+      return bv - av;
+    });
+  }
+
   const w = el("div","tablewrap");
   if (!rows.length){
     w.innerHTML = `<div class="empty">No games in this selection.</div>`;
   } else {
     w.innerHTML = `<table><thead><tr>
-      <th>Kickoff</th><th>Game</th><th>Venue</th><th class="r">Spread</th><th class="r">Total</th>
-      <th class="r">Moneyline</th><th class="r">Score</th><th>Status</th></tr></thead>
+      <th>Kickoff</th><th>Game</th>
+      <th class="r">Market</th><th class="r">Model</th><th class="r">Gap</th>
+      <th class="r">Total</th><th class="r">Model</th><th class="r">Gap</th>
+      <th class="r">Moneyline</th><th class="r">Move</th><th>Adj</th>
+      <th class="r">Score</th><th>Preview</th></tr></thead>
       <tbody>${rows.map(g => {
-        const o = g.odds||{};
-        const done = g.completed;
+        const o = g.odds||{}, p = byId[g.game_id];
+        const mv = (p && p.line_move) || {};
+        const adj = !p ? "" :
+          `${p.has_injuries?'<span class="pill" style="color:var(--good);border-color:var(--good)">inj</span> ':""}` +
+          `${p.has_weather?'<span class="pill" style="color:var(--cool);border-color:var(--cool)">wx</span>':""}` +
+          `${(!p.has_injuries&&!p.has_weather)?'<span class="pill">line only</span>':""}`;
         return `<tr>
           <td class="num" style="white-space:nowrap">${esc(fmtDate(g.date))}</td>
-          <td class="matchup">${esc(g.away)} @ ${esc(g.home)}<small>${esc(g.away_name)} at ${esc(g.home_name)}${g.neutral?" · neutral site":""}</small></td>
-          <td style="color:var(--ink-3);font-size:12.5px">${esc(g.venue||"—")}${g.broadcast?"<br>"+esc(g.broadcast):""}</td>
+          <td class="matchup">${esc(g.away)} @ ${esc(g.home)}<small>${esc(g.away_name)} at ${esc(g.home_name)}${g.neutral?" · neutral":""}${g.broadcast?" · "+esc(g.broadcast):""}</small></td>
           <td class="r num">${o.spread_home==null?"—":esc(g.home)+" "+sgn(o.spread_home)}</td>
+          <td class="r num">${!p||p.model_spread==null?"—":esc(g.home)+" "+sgn(p.model_spread)}</td>
+          <td class="r num ${p&&Math.abs(p.gap||0)>=1?posneg(p.gap):""}">${!p||p.gap==null?"—":sgn(p.gap)}</td>
           <td class="r num">${o.total==null?"—":num(o.total)}</td>
+          <td class="r num">${!p||p.model_total==null?"—":num(p.model_total)}</td>
+          <td class="r num ${p&&Math.abs(p.total_gap||0)>=1?posneg(p.total_gap):""}">${!p||p.total_gap==null?"—":sgn(p.total_gap)}</td>
           <td class="r num">${o.ml_away==null?"—":price(o.ml_away)+" / "+price(o.ml_home)}</td>
-          <td class="r num"><b>${done?`${g.away_score} — ${g.home_score}`:"—"}</b></td>
-          <td style="font-size:12.5px;color:${done?"var(--ink-2)":"var(--ink-3)"}">${esc(g.status||"")}</td>
+          <td class="r num" style="color:var(--ink-3)">${
+            mv.spread==null ? "—"
+            : Math.abs(mv.spread) < 0.05
+              ? `<span style="font-size:11px">no move</span>`
+              : `${sgn(mv.spread)}<br><span style="font-size:10.5px">from ${sgn(mv.opened_spread)}</span>`}</td>
+          <td style="white-space:nowrap">${adj}</td>
+          <td class="r num"><b>${g.completed?`${g.away_score} — ${g.home_score}`:"—"}</b></td>
+          <td style="font-size:12.5px;color:${g.completed?"var(--ink-2)":"var(--ink-3)"}">${
+            g.completed ? esc(g.status||"Final")
+            : (p && p.preview_tier ? `<span class="tier ${tierClass(p.preview_tier)}">${esc(p.preview_tier)}</span>`
+               : `<span style="color:var(--ink-3)">—</span>`)}</td>
         </tr>`;
       }).join("")}</tbody></table>`;
   }
   host.appendChild(w);
+
+  host.appendChild(el("div","note",
+    `<b>Gap</b> is the model's line minus the market's, in points, from the home team's side. It is a look-ahead view, not a play: nothing here is tiered, staked or tracked. A number four months out will move many times before kickoff, and grading a call made today against that line would make the accuracy record look far better than it is. Plays appear on the Best Bets tab as games come inside the betting window.`));
 }
 
 /* ================================================================ simulator */
@@ -1261,10 +1327,17 @@ function renderAccuracy(){
   host.appendChild(el("div","panel-head",
     `<div><h2>Accuracy &amp; tier performance</h2><p>Every call the model has ever made is graded here at a flat one unit — including the passes. That is the only way to test whether the labels mean anything: if PASS plays win as often as GOOD ones, the tiering is decoration and the staking plan is built on sand. A normal bet log cannot tell you that, because it never records the bets you did not make.</p></div>`));
 
-  if (!p || !p.settled_calls){
-    host.appendChild(el("div","empty","No graded calls yet. This fills in automatically as games go final."));
+  if (!p || (!p.settled_calls && !(p.game_forecasts||{}).graded)){
+    host.appendChild(el("div","empty","No graded games yet. This fills in automatically as games go final."));
     return;
   }
+  if (!p.settled_calls){
+    renderForecasts(host, p.game_forecasts);
+    host.appendChild(el("div","empty","No graded bets yet — the tier tables below fill in once the model starts qualifying plays."));
+    return;
+  }
+
+  renderForecasts(host, p.game_forecasts);
 
   const sep = p.separation||{};
   host.appendChild(el("div","note",
@@ -1311,6 +1384,105 @@ function renderAccuracy(){
   b.insertAdjacentHTML("beforeend", accTable(p.by_week,"Week"));
   grid2.appendChild(a); grid2.appendChild(b);
   host.appendChild(grid2);
+}
+
+/** Does the model predict football games? The one measurement that decides
+ *  whether anything else on this page is worth reading. */
+function renderForecasts(host, f){
+  if (!f || !f.graded) return;
+  const L = f.latest_forecast || {}, F = f.first_forecast || {};
+
+  host.appendChild(el("div","panel-head",
+    `<div><h2 style="font-size:17px">Game predictions</h2>
+     <p>Every game the model priced, graded on what actually happened — whether or not a bet was placed. Absolute error means nothing on its own, because NFL margins swing wildly and everyone is wrong by a lot. The column that matters is the market's, right beside it.</p></div>`));
+
+  const better = L.margin_vs_market;
+  host.appendChild(el("div","note", esc(f.verdict||"")));
+
+  const rateCell = r => !r || !r.n ? "—" :
+    `<b>${pct(r.pct)}</b><br><span style="font-size:11px;color:var(--ink-3)">${r.correct}/${r.n}</span>`;
+
+  const w = el("div","tablewrap");
+  w.innerHTML = `<table style="min-width:620px"><thead><tr>
+      <th>Measure</th><th class="r">Model</th><th class="r">Market</th><th class="r">Difference</th>
+      <th>What it means</th></tr></thead><tbody>
+    <tr>
+      <td class="matchup">Margin error</td>
+      <td class="r num"><b>${num(L.margin_mae,2)}</b></td>
+      <td class="r num">${num(L.market_margin_mae,2)}</td>
+      <td class="r num ${posneg(better)}"><b>${better==null?"—":sgn(better,2)}</b></td>
+      <td style="font-size:12.5px;color:var(--ink-2)">Points away from the true final margin, on average. Positive difference means the model is closer than the spread. This is the whole ballgame.</td>
+    </tr>
+    <tr>
+      <td class="matchup">Total error</td>
+      <td class="r num"><b>${num(L.total_mae,2)}</b></td>
+      <td class="r num">${num(L.market_total_mae,2)}</td>
+      <td class="r num ${posneg(L.total_vs_market)}"><b>${L.total_vs_market==null?"—":sgn(L.total_vs_market,2)}</b></td>
+      <td style="font-size:12.5px;color:var(--ink-2)">The same test on combined points.</td>
+    </tr>
+    <tr>
+      <td class="matchup">Beat the market</td>
+      <td class="r num">${rateCell(L.beat_market_margin)}</td>
+      <td class="r num" style="color:var(--ink-3)">50%</td>
+      <td class="r num ${L.beat_market_margin&&L.beat_market_margin.pct!=null?posneg(L.beat_market_margin.pct-0.5):""}">${
+        L.beat_market_margin&&L.beat_market_margin.pct!=null?sgn((L.beat_market_margin.pct-0.5)*100,1)+"pp":"—"}</td>
+      <td style="font-size:12.5px;color:var(--ink-2)">How often the model landed closer than the spread did. A coin flip is 50%.</td>
+    </tr>
+    <tr>
+      <td class="matchup">Straight-up winner</td>
+      <td class="r num">${rateCell(L.straight_up)}</td>
+      <td class="r num" style="color:var(--ink-3)">—</td><td class="r num">—</td>
+      <td style="font-size:12.5px;color:var(--ink-2)">Picked the right winner. Easy to look good at and almost useless for betting — favourites win about two thirds of the time on their own.</td>
+    </tr>
+    <tr>
+      <td class="matchup">Model's side covered</td>
+      <td class="r num">${rateCell(L.against_the_spread)}</td>
+      <td class="r num" style="color:var(--ink-3)">50%</td>
+      <td class="r num ${L.against_the_spread&&L.against_the_spread.pct!=null?posneg(L.against_the_spread.pct-0.5):""}">${
+        L.against_the_spread&&L.against_the_spread.pct!=null?sgn((L.against_the_spread.pct-0.5)*100,1)+"pp":"—"}</td>
+      <td style="font-size:12.5px;color:var(--ink-2)">Whenever the model disagreed with the number, how often it was on the right side. Needs about 52.4% to be worth betting at standard juice.</td>
+    </tr>
+    <tr>
+      <td class="matchup">Model's side on totals</td>
+      <td class="r num">${rateCell(L.totals)}</td>
+      <td class="r num" style="color:var(--ink-3)">50%</td>
+      <td class="r num ${L.totals&&L.totals.pct!=null?posneg(L.totals.pct-0.5):""}">${
+        L.totals&&L.totals.pct!=null?sgn((L.totals.pct-0.5)*100,1)+"pp":"—"}</td>
+      <td style="font-size:12.5px;color:var(--ink-2)">The same, over and under.</td>
+    </tr>
+  </tbody></table>`;
+  host.appendChild(w);
+
+  if (f.sharpening != null){
+    host.appendChild(el("div","note",
+      `<b>Does it sharpen during the week?</b> The model's first look at a game misses the final margin by
+       <b class="mono">${num(F.margin_mae,2)}</b> points on average; its last forecast before kickoff misses by
+       <b class="mono">${num(L.margin_mae,2)}</b> — a change of <b class="mono">${sgn(f.sharpening,2)}</b>.
+       ${f.sharpening > 0.15
+         ? "It is genuinely improving as the week's information arrives."
+         : f.sharpening < -0.15
+           ? "It is getting <b>worse</b> as the week goes on, which usually means something in the late inputs — an injury weighting, a weather adjustment — is doing harm rather than good."
+           : "Its late forecast is no better than its early one. That is worth knowing: it suggests the model is drifting along with the line rather than learning anything from the injury report."}`));
+  }
+
+  const weeks = Object.keys(f.by_week||{});
+  if (weeks.length > 1){
+    const t = el("div","tablewrap");
+    t.innerHTML = `<table style="min-width:520px"><thead><tr>
+      <th>Week</th><th class="r">Games</th><th class="r">Margin error</th><th class="r">Market</th>
+      <th class="r">Diff</th><th class="r">SU</th><th class="r">ATS</th></tr></thead><tbody>
+      ${weeks.map(k => { const b=f.by_week[k];
+        return `<tr><td class="matchup">${esc(k.replace("2:","Week ").replace("1:","Pre "))}</td>
+          <td class="r num">${b.games}</td>
+          <td class="r num">${num(b.margin_mae,2)}</td>
+          <td class="r num" style="color:var(--ink-3)">${num(b.market_margin_mae,2)}</td>
+          <td class="r num ${posneg(b.margin_vs_market)}">${b.margin_vs_market==null?"—":sgn(b.margin_vs_market,2)}</td>
+          <td class="r num">${b.straight_up&&b.straight_up.pct!=null?pct(b.straight_up.pct,0):"—"}</td>
+          <td class="r num">${b.against_the_spread&&b.against_the_spread.pct!=null?pct(b.against_the_spread.pct,0):"—"}</td>
+        </tr>`; }).join("")}</tbody></table>`;
+    host.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">Week by week</h2></div>`));
+    host.appendChild(t);
+  }
 }
 
 /* ================================================================== ledger */
