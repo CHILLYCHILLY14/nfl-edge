@@ -35,6 +35,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872657": [
@@ -72,6 +84,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -111,6 +135,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872659": [
@@ -148,6 +184,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -187,6 +235,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872661": [
@@ -224,6 +284,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -263,6 +335,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872923": [
@@ -300,6 +384,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -339,6 +435,18 @@
    "total": 38.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 38.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872925": [
@@ -376,6 +484,18 @@
    "spread_price_home": -110.0,
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -415,6 +535,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872927": [
@@ -452,6 +584,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -491,6 +635,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872929": [
@@ -528,6 +684,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -567,6 +735,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872931": [
@@ -604,6 +784,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -643,6 +835,18 @@
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872933": [
@@ -680,6 +884,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -719,6 +935,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872935": [
@@ -756,6 +984,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -795,6 +1035,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872937": [
@@ -832,6 +1084,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -871,6 +1135,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872939": [
@@ -908,6 +1184,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -947,6 +1235,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872941": [
@@ -984,6 +1284,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1023,6 +1335,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872943": [
@@ -1060,6 +1384,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 10.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1099,6 +1435,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872945": [
@@ -1136,6 +1484,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1175,6 +1535,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872947": [
@@ -1212,6 +1584,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1251,6 +1635,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872949": [
@@ -1288,6 +1684,18 @@
    "spread_price_home": -110.0,
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1327,6 +1735,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872951": [
@@ -1364,6 +1784,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1403,6 +1835,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872953": [
@@ -1440,6 +1884,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1479,6 +1935,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -9.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872955": [
@@ -1516,6 +1984,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1555,6 +2035,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872957": [
@@ -1592,6 +2084,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1631,6 +2135,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -11.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872959": [
@@ -1668,6 +2184,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": null,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1707,6 +2235,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872961": [
@@ -1744,6 +2284,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1783,6 +2335,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872963": [
@@ -1820,6 +2384,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1859,6 +2435,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872965": [
@@ -1896,6 +2484,18 @@
    "spread_price_home": -110.0,
    "total": 50.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 50.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -1935,6 +2535,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872967": [
@@ -1972,6 +2584,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2011,6 +2635,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872969": [
@@ -2048,6 +2684,18 @@
    "spread_price_home": -110.0,
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2087,6 +2735,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872971": [
@@ -2124,6 +2784,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2163,6 +2835,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872973": [
@@ -2200,6 +2884,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2239,6 +2935,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872975": [
@@ -2276,6 +2984,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2315,6 +3035,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872977": [
@@ -2352,6 +3084,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2391,6 +3135,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872979": [
@@ -2428,6 +3184,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2467,6 +3235,18 @@
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872981": [
@@ -2504,6 +3284,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2543,6 +3335,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 6.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872983": [
@@ -2580,6 +3384,18 @@
    "spread_price_home": -110.0,
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2619,6 +3435,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872985": [
@@ -2656,6 +3484,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2695,6 +3535,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872987": [
@@ -2732,6 +3584,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2771,6 +3635,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872989": [
@@ -2808,6 +3684,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2847,6 +3735,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872991": [
@@ -2884,6 +3784,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2923,6 +3835,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872993": [
@@ -2960,6 +3884,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -2999,6 +3935,18 @@
    "total": 53.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 53.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872995": [
@@ -3036,6 +3984,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3075,6 +4035,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872997": [
@@ -3112,6 +4084,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3151,6 +4135,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401872999": [
@@ -3188,6 +4184,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3227,6 +4235,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873001": [
@@ -3264,6 +4284,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -9.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3303,6 +4335,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873003": [
@@ -3340,6 +4384,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3379,6 +4435,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -13.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873005": [
@@ -3416,6 +4484,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3455,6 +4535,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873007": [
@@ -3492,6 +4584,18 @@
    "spread_price_home": -110.0,
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3531,6 +4635,18 @@
    "total": 50.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 50.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873009": [
@@ -3568,6 +4684,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3607,6 +4735,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873011": [
@@ -3644,6 +4784,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3683,6 +4835,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873013": [
@@ -3720,6 +4884,18 @@
    "spread_price_home": -110.0,
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3759,6 +4935,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873015": [
@@ -3796,6 +4984,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3835,6 +5035,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873017": [
@@ -3872,6 +5084,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3911,6 +5135,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873019": [
@@ -3948,6 +5184,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -3987,6 +5235,18 @@
    "total": 50.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 50.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873021": [
@@ -4024,6 +5284,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4063,6 +5335,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873023": [
@@ -4100,6 +5384,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4139,6 +5435,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873025": [
@@ -4176,6 +5484,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4215,6 +5535,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873027": [
@@ -4252,6 +5584,18 @@
    "spread_price_home": -110.0,
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4291,6 +5635,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873029": [
@@ -4328,6 +5684,18 @@
    "spread_price_home": -110.0,
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4367,6 +5735,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873031": [
@@ -4404,6 +5784,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4443,6 +5835,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873033": [
@@ -4480,6 +5884,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4519,6 +5935,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873035": [
@@ -4556,6 +5984,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4595,6 +6035,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873037": [
@@ -4632,6 +6084,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4671,6 +6135,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873039": [
@@ -4708,6 +6184,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4747,6 +6235,18 @@
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873041": [
@@ -4784,6 +6284,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4823,6 +6335,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873043": [
@@ -4860,6 +6384,18 @@
    "spread_price_home": -110.0,
    "total": 50.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 50.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4899,6 +6435,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873045": [
@@ -4936,6 +6484,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -9.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -4975,6 +6535,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873047": [
@@ -5012,6 +6584,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5051,6 +6635,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -13.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873049": [
@@ -5088,6 +6684,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5127,6 +6735,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873051": [
@@ -5164,6 +6784,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5203,6 +6835,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873053": [
@@ -5240,6 +6884,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5279,6 +6935,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873055": [
@@ -5316,6 +6984,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5355,6 +7035,18 @@
    "total": 38.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 38.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873057": [
@@ -5392,6 +7084,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5431,6 +7135,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873059": [
@@ -5468,6 +7184,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5507,6 +7235,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873061": [
@@ -5544,6 +7284,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5583,6 +7335,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873063": [
@@ -5620,6 +7384,18 @@
    "spread_price_home": -110.0,
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5659,6 +7435,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873065": [
@@ -5696,6 +7484,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5735,6 +7535,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873067": [
@@ -5772,6 +7584,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -11.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5811,6 +7635,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873069": [
@@ -5848,6 +7684,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5887,6 +7735,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -11.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873071": [
@@ -5924,6 +7784,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -5963,6 +7835,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873073": [
@@ -6000,6 +7884,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6039,6 +7935,18 @@
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -9.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873075": [
@@ -6076,6 +7984,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6115,6 +8035,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873077": [
@@ -6152,6 +8084,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6191,6 +8135,18 @@
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873079": [
@@ -6228,6 +8184,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6267,6 +8235,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873081": [
@@ -6304,6 +8284,18 @@
    "spread_price_home": -110.0,
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6343,6 +8335,18 @@
    "total": 50.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 50.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873083": [
@@ -6380,6 +8384,18 @@
    "spread_price_home": -110.0,
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6419,6 +8435,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873085": [
@@ -6456,6 +8484,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6495,6 +8535,18 @@
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873087": [
@@ -6532,6 +8584,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6571,6 +8635,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873089": [
@@ -6608,6 +8684,18 @@
    "spread_price_home": -110.0,
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6647,6 +8735,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873091": [
@@ -6684,6 +8784,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6723,6 +8835,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873093": [
@@ -6760,6 +8884,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6799,6 +8935,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873095": [
@@ -6836,6 +8984,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6875,6 +9035,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873097": [
@@ -6912,6 +9084,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -6951,6 +9135,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873099": [
@@ -6988,6 +9184,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7027,6 +9235,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873101": [
@@ -7064,6 +9284,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7103,6 +9335,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873103": [
@@ -7140,6 +9384,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -9.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7179,6 +9435,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873105": [
@@ -7216,6 +9484,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7255,6 +9535,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873107": [
@@ -7292,6 +9584,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7331,6 +9635,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873109": [
@@ -7368,6 +9684,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7407,6 +9735,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873111": [
@@ -7444,6 +9784,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7483,6 +9835,18 @@
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873113": [
@@ -7520,6 +9884,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7559,6 +9935,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873115": [
@@ -7596,6 +9984,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7635,6 +10035,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873117": [
@@ -7672,6 +10084,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7711,6 +10135,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873119": [
@@ -7748,6 +10184,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7787,6 +10235,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873121": [
@@ -7824,6 +10284,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7863,6 +10335,18 @@
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873123": [
@@ -7900,6 +10384,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -7939,6 +10435,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873125": [
@@ -7976,6 +10484,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8015,6 +10535,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873127": [
@@ -8052,6 +10584,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8091,6 +10635,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873129": [
@@ -8128,6 +10684,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8167,6 +10735,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873131": [
@@ -8204,6 +10784,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8243,6 +10835,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873133": [
@@ -8280,6 +10884,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8319,6 +10935,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873135": [
@@ -8356,6 +10984,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8395,6 +11035,18 @@
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -6.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873137": [
@@ -8432,6 +11084,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8471,6 +11135,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873139": [
@@ -8508,6 +11184,18 @@
    "spread_price_home": -110.0,
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8547,6 +11235,18 @@
    "total": 37.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 37.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873141": [
@@ -8584,6 +11284,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8623,6 +11335,18 @@
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873143": [
@@ -8660,6 +11384,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8699,6 +11435,18 @@
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873145": [
@@ -8736,6 +11484,18 @@
    "spread_price_home": -110.0,
    "total": 52.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 52.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8775,6 +11535,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873147": [
@@ -8812,6 +11584,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8851,6 +11635,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873149": [
@@ -8888,6 +11684,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -8927,6 +11735,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873151": [
@@ -8964,6 +11784,18 @@
    "spread_price_home": -110.0,
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 6.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9003,6 +11835,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873153": [
@@ -9040,6 +11884,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9079,6 +11935,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873155": [
@@ -9116,6 +11984,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9155,6 +12035,18 @@
    "total": 51.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 51.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873157": [
@@ -9192,6 +12084,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9231,6 +12135,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873159": [
@@ -9268,6 +12184,18 @@
    "spread_price_home": -110.0,
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9307,6 +12235,18 @@
    "total": 48.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 48.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873161": [
@@ -9344,6 +12284,18 @@
    "spread_price_home": -110.0,
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9383,6 +12335,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873163": [
@@ -9420,6 +12384,18 @@
    "spread_price_home": -110.0,
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9459,6 +12435,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873165": [
@@ -9496,6 +12484,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9535,6 +12535,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873167": [
@@ -9572,6 +12584,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9611,6 +12635,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873169": [
@@ -9648,6 +12684,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9687,6 +12735,18 @@
    "total": 45.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 45.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873171": [
@@ -9724,6 +12784,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9763,6 +12835,18 @@
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873173": [
@@ -9800,6 +12884,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9839,6 +12935,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873175": [
@@ -9876,6 +12984,18 @@
    "spread_price_home": -110.0,
    "total": 49.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 49.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9915,6 +13035,18 @@
    "total": 47.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -2.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 47.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873177": [
@@ -9952,6 +13084,18 @@
    "spread_price_home": -110.0,
    "total": 46.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 46.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -9991,6 +13135,18 @@
    "total": 40.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 40.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873179": [
@@ -10028,6 +13184,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -10067,6 +13235,18 @@
    "total": 42.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873181": [
@@ -10104,6 +13284,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -10.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -10143,6 +13335,18 @@
    "total": 41.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873183": [
@@ -10180,6 +13384,18 @@
    "spread_price_home": -110.0,
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -5.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -10219,6 +13435,18 @@
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 8.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873185": [
@@ -10256,6 +13484,18 @@
    "spread_price_home": -110.0,
    "total": 44.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -3.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 44.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ],
@@ -10295,6 +13535,18 @@
    "total": 43.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 43.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873187": [
@@ -10333,6 +13585,18 @@
    "total": 39.5,
    "ts": "2026-08-23T06:00:00+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -7.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 39.5,
+   "ts": "2026-08-23T13:45:09+00:00",
+   "under_price": -110.0
   }
  ],
  "401873297": [
@@ -10370,6 +13634,18 @@
    "spread_price_home": -110.0,
    "total": 37.5,
    "ts": "2026-08-23T06:00:00+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "Draft Kings",
+   "ml_away": null,
+   "ml_home": null,
+   "over_price": -110.0,
+   "spread_home": -4.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 37.5,
+   "ts": "2026-08-23T13:45:09+00:00",
    "under_price": -110.0
   }
  ]
