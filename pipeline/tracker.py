@@ -38,6 +38,16 @@ def key(game_id: str, market: str, side: str) -> str:
     return f"{game_id}:{market}:{side}"
 
 
+def drop_pending_for_games(shadow: dict, game_ids: set[str]) -> int:
+    """Discard only ungraded calls built from known fabricated price feeds."""
+    doomed = [k for k, row in shadow.items()
+              if str(row.get("game_id")) in game_ids
+              and row.get("result") in (None, "Pending")]
+    for k in doomed:
+        del shadow[k]
+    return len(doomed)
+
+
 def record(shadow: dict, cands: list[dict]) -> int:
     """Write each candidate once, the first time the model priced it."""
     added = 0

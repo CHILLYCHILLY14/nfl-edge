@@ -73,7 +73,13 @@ def merge_games(cache: list[dict], fresh: list[dict]) -> list[dict]:
     for g in fresh:
         old = by_id.get(g["game_id"])
         if old:
-            if not (g.get("odds") or {}).get("spread_home") and (old.get("odds") or {}).get("spread_home"):
+            new_odds = g.get("odds") or {}
+            old_odds = old.get("odds") or {}
+            new_has_line = any(new_odds.get(k) is not None
+                               for k in ("spread_home", "total", "ml_home"))
+            old_has_line = any(old_odds.get(k) is not None
+                               for k in ("spread_home", "total", "ml_home"))
+            if not new_has_line and old_has_line:
                 g["odds"] = old["odds"]
             if g.get("home_score") is None and old.get("home_score") is not None:
                 g["home_score"] = old["home_score"]
@@ -362,13 +368,15 @@ def price_game(g: dict, proj: dict, cfg: dict, conf: float, stale: bool,
                               p - be, gap))
 
     # ---- Spread ----------------------------------------------------------- #
-    if cfg["markets"]["spread"] and o.get("spread_home") is not None:
+    if (cfg["markets"]["spread"] and o.get("spread_home") is not None
+            and o.get("spread_price_home") is not None
+            and o.get("spread_price_away") is not None):
         sp = float(o["spread_home"])
         pw, pp, pl = M.cover_probability(mu, sd_m, sp, keys)
         denom = pw + pl
         raw_h = pw / denom if denom else 0.5
-        ph_price = float(o.get("spread_price_home") or -110)
-        pa_price = float(o.get("spread_price_away") or -110)
+        ph_price = float(o["spread_price_home"])
+        pa_price = float(o["spread_price_away"])
         be_h, be_a = M.american_to_prob(ph_price), M.american_to_prob(pa_price)
         fair_h, fair_a = M.devig(be_h, be_a)
         p_h = (1 - blend) * raw_h + blend * fair_h
@@ -387,13 +395,15 @@ def price_game(g: dict, proj: dict, cfg: dict, conf: float, stale: bool,
                               p - be, gap))
 
     # ---- Total ------------------------------------------------------------ #
-    if cfg["markets"]["total"] and o.get("total") is not None:
+    if (cfg["markets"]["total"] and o.get("total") is not None
+            and o.get("over_price") is not None
+            and o.get("under_price") is not None):
         tot = float(o["total"])
         po, pp, pu = M.over_probability(proj["proj_total"], tot, sd_t)
         denom = po + pu
         raw_o = po / denom if denom else 0.5
-        op = float(o.get("over_price") or -110)
-        up = float(o.get("under_price") or -110)
+        op = float(o["over_price"])
+        up = float(o["under_price"])
         be_o, be_u = M.american_to_prob(op), M.american_to_prob(up)
         fair_o, fair_u = M.devig(be_o, be_u)
         p_o = (1 - blend) * raw_o + blend * fair_o
@@ -607,7 +617,9 @@ def main() -> int:
     week_now = current_week(cal, today)
 
     # 3. Odds snapshots -- this is what makes grading and CLV possible at all.
-    lines = store.record_lines(store.load("lines.json", {}), games)
+    lines = store.load("lines.json", {})
+    repaired_price_games = store.repair_fabricated_default_prices(lines)
+    lines = store.record_lines(lines, games)
     ledg = store.load("ledger.json", {})
     for bet in ledg.values():
         if args.offline:
@@ -729,6 +741,10 @@ def main() -> int:
 
     # 7. Self-calibration, fitted on the model's own graded history.
     shadow_now = store.load("shadow.json", {})
+    if repaired_price_games:
+        dropped = tracker.drop_pending_for_games(shadow_now, repaired_price_games)
+        if dropped:
+            print(f"   odds repair: removed {dropped} ungraded call(s) priced from fabricated defaults")
     calib = calibrate.fit(shadow_now, cfg)
     if calib.get("enabled"):
         print(f"   calibration: a={calib['a']} b={calib['b']} on {calib['n']} graded calls "
@@ -741,7 +757,7 @@ def main() -> int:
     game_cards: list[dict] = []
     for g in upcoming:
         odds = g.get("odds") or {}
-        has_odds = odds.get("spread_home") is not None or odds.get("ml_home") is not None
+        has_odds = bool(espn.priced_markets(odds))
         conf = M.confidence_score(played.get(g["home"]["abbr"], 0),
                                   played.get(g["away"]["abbr"], 0),
                                   has_odds, cfg, int(g.get("season_type") or 2))
@@ -796,6 +812,7 @@ def main() -> int:
                   and g["date_utc"][:10] >= today.isoformat()
                   and R.real_matchup(g) and int(g.get("season_type") or 2) < 4
                   and ((g.get("odds") or {}).get("spread_home") is not None
+                       or (g.get("odds") or {}).get("total") is not None
                        or (g.get("odds") or {}).get("ml_home") is not None)]
         for g in future:
             proj = project(g, rat, hfa, score_rat, league_pts, home_bump, rests, ovr, cfg,
@@ -842,9 +859,13 @@ def main() -> int:
     held = sum(1 for c in board if c.get("held"))
     no_line = sum(1 for g in upcoming
                   if (g.get("odds") or {}).get("spread_home") is None
+                  and (g.get("odds") or {}).get("total") is None
                   and (g.get("odds") or {}).get("ml_home") is None)
+    odds_health = espn.odds_health(upcoming)
     all_pre = bool(upcoming) and all(int(g.get("season_type") or 2) == 1 for g in upcoming)
     print(f"   priced {len(upcoming)} games -> {len(board)} market lines, {plays} actionable")
+    print(f"   odds feed: {odds_health['status']} — {odds_health['priced_games']}/"
+          f"{odds_health['line_games']} games with posted lines have real prices")
 
     # 9. Forecast log: what the model said about each game, bet or no bet.
     fc_log = store.load("forecasts.json", {})
@@ -932,6 +953,7 @@ def main() -> int:
         "counts": {"board": len(board), "actionable": plays, "tracked_calls": len(shadow),
                    "held": held, "upcoming_without_a_line": no_line,
                    "upcoming": len(upcoming), "all_preseason": all_pre},
+        "odds_health": odds_health,
         "horizon_days": int(cfg["data"]["lookahead_days"]),
         "weather_forecast_days": int((cfg.get("weather") or {}).get("forecast_days", 16)),
         "bet_within_days": int(cfg["filters"].get("bet_within_days") or 0),

@@ -27,6 +27,7 @@ board is the product; the news column is not worth a broken build.
 from __future__ import annotations
 
 import datetime as dt
+import re
 import time
 from typing import Any, Iterable
 
@@ -125,14 +126,29 @@ def calendar(season: int) -> list[dict]:
 # --------------------------------------------------------------------------- #
 
 def _num(v: Any) -> float | None:
-    if v is None or v == "" or v == "OFF":
+    if v is None:
         return None
-    if v == "EVEN":
+    text = str(v).strip()
+    if not text or text.upper() in ("OFF", "N/A", "NA"):
+        return None
+    if text.upper() in ("EVEN", "EV"):
         return 100.0
     try:
-        return float(v)
+        return float(text.replace("+", ""))
     except (TypeError, ValueError):
         return None
+
+
+def _line_num(v: Any) -> float | None:
+    """Parse a numeric line, including ESPN strings such as ``o37.5``."""
+    if isinstance(v, str):
+        v = re.sub(r"^[ouOU]", "", v.strip())
+    return _num(v)
+
+
+def _provider_key(name: str) -> str:
+    """Treat ``Draft Kings`` and ``DraftKings`` as the same provider."""
+    return re.sub(r"[^a-z0-9]", "", (name or "").lower())
 
 
 def _pick_odds_block(odds_list: Iterable[dict], priority: list[str]) -> dict | None:
@@ -146,9 +162,9 @@ def _pick_odds_block(odds_list: Iterable[dict], priority: list[str]) -> dict | N
     by_name: dict[str, dict] = {}
     for b in blocks:
         name = ((b.get("provider") or {}).get("name") or "").strip()
-        by_name.setdefault(name.lower(), b)
+        by_name.setdefault(_provider_key(name), b)
     for want in priority:
-        hit = by_name.get(want.lower())
+        hit = by_name.get(_provider_key(want))
         if hit:
             return hit
     return blocks[0]
@@ -167,38 +183,141 @@ def parse_odds(block: dict | None) -> dict:
     away = block.get("awayTeamOdds") or {}
     home = block.get("homeTeamOdds") or {}
 
-    def _ml(side: dict) -> float | None:
+    def _close(node: Any) -> dict:
+        if not isinstance(node, dict):
+            return {}
+        close = node.get("close")
+        return close if isinstance(close, dict) else node
+
+    def _ml(side_name: str, side: dict) -> float | None:
+        # Summary / Core legacy shape.
         for key in ("moneyLine", "moneyline"):
             v = _num(side.get(key))
             if v is not None:
                 return v
+
+        # Current scoreboard shape (August 2026). Prices moved out of
+        # awayTeamOdds/homeTeamOdds and into a top-level moneyline object.
+        current = _close((block.get("moneyline") or {}).get(side_name))
+        v = _num(current.get("odds") or current.get("american"))
+        if v is not None:
+            return v
+
+        # Older nested shapes retained for completed games.
         cur = side.get("current") or {}
-        v = _num((cur.get("moneyLine") or {}).get("american"))
+        ml = cur.get("moneyLine") or {}
+        v = _num(ml.get("american") or ml.get("alternateDisplayValue")
+                 if isinstance(ml, dict) else ml)
         if v is not None:
             return v
         opn = side.get("open") or {}
-        return _num((opn.get("moneyLine") or {}).get("american"))
+        ml = opn.get("moneyLine") or {}
+        return _num(ml.get("american") or ml.get("alternateDisplayValue")
+                    if isinstance(ml, dict) else ml)
 
-    def _spread_price(side: dict) -> float | None:
+    def _spread_price(side_name: str, side: dict) -> float | None:
+        # Current scoreboard shape: explicit price beside the explicit line.
+        current = _close((block.get("pointSpread") or {}).get(side_name))
+        v = _num(current.get("odds") or current.get("american"))
+        if v is not None:
+            return v
+
+        # Summary legacy shape.
+        v = _num(side.get("spreadOdds"))
+        if v is not None:
+            return v
+
+        # Core nested shape: pointSpread is the line, spread is the price.
         cur = side.get("current") or {}
-        v = _num((cur.get("pointSpread") or {}).get("american"))
-        return v if v is not None else -110.0
+        spread = cur.get("spread") or {}
+        return _num(spread.get("american") or spread.get("alternateDisplayValue")
+                    if isinstance(spread, dict) else spread)
+
+    point_spread = block.get("pointSpread") or {}
+    home_spread = _close(point_spread.get("home"))
+    spread_home = _line_num(home_spread.get("line"))
+    if spread_home is None:
+        spread_home = _num(block.get("spread"))
+
+    total_block = block.get("total") or {}
+    over = _close(total_block.get("over"))
+    under = _close(total_block.get("under"))
+    total = _num(block.get("overUnder"))
+    if total is None:
+        total = _line_num(over.get("line") or under.get("line"))
+
+    over_price = _num(over.get("odds") or over.get("american"))
+    under_price = _num(under.get("odds") or under.get("american"))
+    if over_price is None:
+        over_price = _num(block.get("overOdds"))
+    if under_price is None:
+        under_price = _num(block.get("underOdds"))
 
     cur = block.get("current") or {}
-    over_price = _num((cur.get("over") or {}).get("american"))
-    under_price = _num((cur.get("under") or {}).get("american"))
+    if over_price is None:
+        over_price = _num((cur.get("over") or {}).get("american"))
+    if under_price is None:
+        under_price = _num((cur.get("under") or {}).get("american"))
 
-    return {
+    out = {
         "book": ((block.get("provider") or {}).get("name") or "ESPN").strip(),
-        "spread_home": _num(block.get("spread")),
-        "spread_price_home": _spread_price(home),
-        "spread_price_away": _spread_price(away),
-        "total": _num(block.get("overUnder")),
-        "over_price": over_price if over_price is not None else -110.0,
-        "under_price": under_price if under_price is not None else -110.0,
-        "ml_home": _ml(home),
-        "ml_away": _ml(away),
+        "spread_home": spread_home,
+        "spread_price_home": _spread_price("home", home),
+        "spread_price_away": _spread_price("away", away),
+        "total": total,
+        "over_price": over_price,
+        "under_price": under_price,
+        "ml_home": _ml("home", home),
+        "ml_away": _ml("away", away),
         "details": block.get("details"),
+        "keyless": True,
+        "source": "ESPN public feed",
+    }
+    out["priced_markets"] = priced_markets(out)
+    return out
+
+
+def priced_markets(odds: dict | None) -> list[str]:
+    """Markets backed by a complete real two-sided price, never a default."""
+    o = odds or {}
+    out = []
+    if o.get("ml_home") is not None and o.get("ml_away") is not None:
+        out.append("ML")
+    if (o.get("spread_home") is not None
+            and o.get("spread_price_home") is not None
+            and o.get("spread_price_away") is not None):
+        out.append("ATS")
+    if (o.get("total") is not None
+            and o.get("over_price") is not None
+            and o.get("under_price") is not None):
+        out.append("TOTAL")
+    return out
+
+
+def odds_health(games: list[dict]) -> dict:
+    """Publish feed coverage so a parser regression cannot look like odds."""
+    rows = [g.get("odds") or {} for g in games]
+    has_line = lambda o: (o.get("spread_home") is not None
+                          or o.get("total") is not None
+                          or o.get("ml_home") is not None)
+    line_games = sum(has_line(o) for o in rows)
+    priced = sum(bool(priced_markets(o)) for o in rows)
+    if line_games and not priced:
+        status = "unavailable"
+    elif priced < line_games:
+        status = "partial"
+    else:
+        status = "ok"
+    return {
+        "status": status,
+        "expected_games": len(rows),
+        "line_games": line_games,
+        "priced_games": priced,
+        "moneyline_games": sum("ML" in priced_markets(o) for o in rows),
+        "spread_games": sum("ATS" in priced_markets(o) for o in rows),
+        "total_games": sum("TOTAL" in priced_markets(o) for o in rows),
+        "keyless": True,
+        "provider": "ESPN public feed",
     }
 
 

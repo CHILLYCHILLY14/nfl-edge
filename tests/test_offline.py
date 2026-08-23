@@ -19,7 +19,7 @@ import os
 import random
 import unittest
 
-from pipeline import explain, injuries as INJ, ledger, model as M
+from pipeline import espn, explain, injuries as INJ, ledger, model as M, store
 from pipeline import ratings as R, stats as ST, tracker, weather as WX
 from pipeline import build as B
 
@@ -47,6 +47,103 @@ class TestOdds(unittest.TestCase):
         fav, dog = M.devig(M.american_to_prob(-250), M.american_to_prob(+200))
         self.assertGreater(fav, dog)
         self.assertAlmostEqual(fav + dog, 1.0, places=9)
+
+
+class TestEspnOddsParsing(unittest.TestCase):
+    CURRENT = {
+        "provider": {"name": "DraftKings"},
+        "details": "TEN -3.5", "spread": -3.5, "overUnder": 37.5,
+        "awayTeamOdds": {}, "homeTeamOdds": {},
+        "moneyline": {
+            "home": {"close": {"odds": "-185"}},
+            "away": {"close": {"odds": "+154"}},
+        },
+        "pointSpread": {
+            "home": {"close": {"line": "-3.5", "odds": "-115"}},
+            "away": {"close": {"line": "+3.5", "odds": "-105"}},
+        },
+        "total": {
+            "over": {"close": {"line": "o37.5", "odds": "-108"}},
+            "under": {"close": {"line": "u37.5", "odds": "-112"}},
+        },
+    }
+
+    def test_current_scoreboard_schema_uses_real_prices(self):
+        o = espn.parse_odds(self.CURRENT)
+        self.assertEqual(o["spread_home"], -3.5)
+        self.assertEqual((o["spread_price_home"], o["spread_price_away"]), (-115, -105))
+        self.assertEqual((o["total"], o["over_price"], o["under_price"]),
+                         (37.5, -108, -112))
+        self.assertEqual((o["ml_home"], o["ml_away"]), (-185, 154))
+        self.assertEqual(o["priced_markets"], ["ML", "ATS", "TOTAL"])
+        self.assertTrue(o["keyless"])
+
+    def test_summary_legacy_schema_still_works(self):
+        block = {
+            "provider": {"name": "DraftKings"},
+            "spread": -3.5, "overUnder": 37.5,
+            "overOdds": -108, "underOdds": -112,
+            "awayTeamOdds": {"moneyLine": 154, "spreadOdds": -105},
+            "homeTeamOdds": {"moneyLine": -185, "spreadOdds": -115},
+        }
+        o = espn.parse_odds(block)
+        self.assertEqual((o["ml_home"], o["ml_away"]), (-185, 154))
+        self.assertEqual((o["spread_price_home"], o["spread_price_away"]), (-115, -105))
+        self.assertEqual((o["over_price"], o["under_price"]), (-108, -112))
+
+    def test_line_without_prices_fails_closed(self):
+        o = espn.parse_odds({
+            "provider": {"name": "DraftKings"}, "spread": -3.5,
+            "overUnder": 37.5, "awayTeamOdds": {}, "homeTeamOdds": {},
+        })
+        self.assertEqual(o["spread_home"], -3.5)
+        self.assertEqual(o["total"], 37.5)
+        self.assertIsNone(o["spread_price_home"])
+        self.assertIsNone(o["over_price"])
+        self.assertEqual(o["priced_markets"], [])
+
+        game = {"game_id": "1", "date_utc": "2026-08-23T20:00Z", "week": 3,
+                "season_type": 1, "home": {"abbr": "TEN"}, "away": {"abbr": "SEA"},
+                "odds": o}
+        proj = {"mu": 3.5, "gap": 0.0, "proj_total": 37.5, "total_gap": 0.0}
+        self.assertEqual(B.price_game(game, proj, CFG, 0.5, False), [])
+
+    def test_current_schema_prices_all_six_sides(self):
+        game = {"game_id": "1", "date_utc": "2026-08-23T20:00Z", "week": 3,
+                "season_type": 1, "home": {"abbr": "TEN"}, "away": {"abbr": "SEA"},
+                "odds": espn.parse_odds(self.CURRENT)}
+        proj = {"mu": 3.5, "gap": 0.0, "proj_total": 37.5, "total_gap": 0.0}
+        rows = B.price_game(game, proj, CFG, 0.5, False)
+        self.assertEqual(len(rows), 6)
+        self.assertEqual({r["price"] for r in rows}, {-185.0, 154.0, -115.0,
+                                                       -105.0, -108.0, -112.0})
+
+    def test_provider_names_ignore_spaces(self):
+        selected = espn._pick_odds_block(
+            [{"provider": {"name": "Other"}}, self.CURRENT], ["Draft Kings"])
+        self.assertIs(selected, self.CURRENT)
+
+    def test_health_exposes_unpriced_lines(self):
+        line_only = espn.parse_odds({"spread": -3.5, "overUnder": 37.5})
+        bad = espn.odds_health([{"odds": line_only}])
+        self.assertEqual(bad["status"], "unavailable")
+        good = espn.odds_health([{"odds": espn.parse_odds(self.CURRENT)}])
+        self.assertEqual(good["status"], "ok")
+
+    def test_old_slate_wide_defaults_are_repaired(self):
+        lines = {str(i): [{"ml_home": None, "ml_away": None,
+                           "spread_price_home": -110, "spread_price_away": -110,
+                           "over_price": -110, "under_price": -110}]
+                 for i in range(6)}
+        repaired = store.repair_fabricated_default_prices(lines)
+        self.assertEqual(repaired, {str(i) for i in range(6)})
+        self.assertTrue(all(row[0]["over_price"] is None for row in lines.values()))
+
+        shadow = {f"{i}:ATS:home": {"game_id": str(i), "result": "Pending"}
+                  for i in range(6)}
+        shadow["settled"] = {"game_id": "0", "result": "Win"}
+        self.assertEqual(tracker.drop_pending_for_games(shadow, repaired), 6)
+        self.assertEqual(set(shadow), {"settled"})
 
 
 class TestKeyNumbers(unittest.TestCase):

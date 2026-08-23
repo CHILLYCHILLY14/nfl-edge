@@ -58,6 +58,43 @@ def now_iso() -> str:
 # Line history
 # --------------------------------------------------------------------------- #
 
+_PRICE_KEYS = ("spread_price_home", "spread_price_away", "over_price", "under_price")
+
+
+def repair_fabricated_default_prices(lines: dict) -> set[str]:
+    """Remove the old parser's invented ``-110`` prices in place.
+
+    Before August 2026 the parser filled every missing spread and total price
+    with -110. A single game can genuinely be -110 on all four selections, so
+    this migration only activates when that exact no-moneyline shape appears
+    across at least three games and six snapshots — a feed-wide signature, not
+    one ordinary market. Lines and timestamps are preserved; only invented
+    prices are cleared so the next live build can append the real prices.
+    """
+    def is_minus_110(value) -> bool:
+        try:
+            return float(value) == -110.0
+        except (TypeError, ValueError):
+            return False
+
+    candidates: list[tuple[str, dict]] = []
+    for game_id, history in (lines or {}).items():
+        for snap in history or []:
+            prices = [snap.get(k) for k in _PRICE_KEYS]
+            if (snap.get("ml_home") is None and snap.get("ml_away") is None
+                    and all(is_minus_110(v) for v in prices)):
+                candidates.append((str(game_id), snap))
+    game_ids = {game_id for game_id, _ in candidates}
+    if len(candidates) < 6 or len(game_ids) < 3:
+        return set()
+    for _, snap in candidates:
+        for key in _PRICE_KEYS:
+            snap[key] = None
+        snap["repaired"] = "removed fabricated -110 defaults"
+    print(f"   odds repair: cleared {len(candidates)} fabricated price snapshot(s) "
+          f"across {len(game_ids)} games")
+    return game_ids
+
 def record_lines(lines: dict, games: list[dict]) -> dict:
     """Append a snapshot for any game whose number has moved since last run."""
     ts = now_iso()

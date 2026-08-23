@@ -1602,6 +1602,10 @@ async function boot(again){
     const d = $("#demobar");
     d.className = "demo"; d.hidden = false;
     d.innerHTML = `<b>Simulated data.</b> Every team is real; every game, line, score, injury and forecast on this page was invented by <code>tools/make_demo.py</code> so the layout can be seen before live data arrives. Nothing here is a real result. Run <code>python -m pipeline.build</code> to replace it.`;
+  } else if (m.odds_health && m.odds_health.status !== "ok"){
+    const d = $("#demobar"), h = m.odds_health;
+    d.className = "demo"; d.hidden = false;
+    d.innerHTML = `<b>Odds feed ${esc(h.status)}.</b> ESPN supplied real two-sided prices for <b>${h.priced_games||0} of ${h.line_games||0}</b> games with posted lines. Missing prices are shown as unavailable and are never replaced with made-up -110 numbers. Fair model lines remain visible, but no affected market is tiered or staked.`;
   } else {
     $("#demobar").hidden = true;
   }
