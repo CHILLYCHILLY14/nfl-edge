@@ -15,6 +15,17 @@ name: Refresh model
 # fine for a model that reads a market every few hours. Do not treat it as a
 # live feed, and do not point it at a game kicking off in ten minutes.
 on:
+  push:
+    branches: [main]
+    # Source/config uploads rebuild immediately. Generated-data commits do not
+    # match these paths, so the bot cannot trigger itself in a loop.
+    paths:
+      - ".github/workflows/refresh.yml"
+      - "pipeline/**"
+      - "config/**"
+      - "tests/**"
+      - "site/index.html"
+      - "requirements.txt"
   schedule:
     - cron: "0 12,16,20 * * *"
     - cron: "0 0,5 * * *"
@@ -47,6 +58,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Verify the keyless odds parser
+        run: python -m unittest tests.test_offline.TestEspnOddsParsing -v
 
       - name: Run the model
         run: |
