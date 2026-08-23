@@ -1,0 +1,94 @@
+name: Refresh model
+
+# Free on GitHub Actions for a public repo, and comfortably inside the free
+# minutes for a private one: each run takes well under a minute.
+#
+# Times are UTC. The schedule below is tuned for Eastern time and for how the
+# NFL week actually moves:
+#   12:00 UTC = 08:00 ET  morning line check, injury report lands
+#   16:00 UTC = 12:00 ET  before the early Sunday kicks
+#   20:00 UTC = 16:00 ET  before the late window
+#   00:00 UTC = 20:00 ET  before Sunday and Monday night
+#   05:00 UTC = 01:00 ET  after the late games, to grade
+#
+# GitHub's scheduler is best-effort and can run several minutes late. That is
+# fine for a model that reads a market every few hours. Do not treat it as a
+# live feed, and do not point it at a game kicking off in ten minutes.
+on:
+  schedule:
+    - cron: "0 12,16,20 * * *"
+    - cron: "0 0,5 * * *"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Full-season backfill (slow, rebuilds the cache)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nfl-edge-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the model
+        run: |
+          if [ "${{ inputs.full }}" = "true" ]; then
+            python -m pipeline.build --full
+          else
+            python -m pipeline.build
+          fi
+
+      - name: Export the workbook
+        run: python -m pipeline.to_excel
+
+      # state/ has to be committed back or the model forgets everything between
+      # runs: the odds snapshots that make grading and closing-line value
+      # possible, the bet ledger, and the shadow book that tracks tier accuracy.
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "nfl-edge bot"
+          git config user.email "actions@github.com"
+          git add -A state site/data NFL_Edge_Model.xlsx
+          git diff --staged --quiet || git commit -m "Refresh: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          # Another run may have pushed while this one was working.
+          git pull --rebase --autostash origin ${{ github.ref_name }} || true
+          git push
+
+      - name: Package the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  # Deploying has to be its own job with the github-pages environment declared.
+  # actions/deploy-pages refuses to run without it, which is a confusing failure
+  # right at the end of an otherwise successful run.
+  publish:
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

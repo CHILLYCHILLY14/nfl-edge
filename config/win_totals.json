@@ -1,0 +1,17 @@
+{
+  "_comment": "Market season win totals, used ONLY as the preseason prior. Once real games are played the ridge solve takes over and these fade out on the schedule set by ratings.prior_season_weight / early_season_shrink. Refresh them in August each year; they are the single best public estimate of team strength before anyone has played.",
+  "_source": "2026 consensus season win totals, cross-checked against the schedule-release board (Yahoo Sports, May 2026). The workbook this project replaced had 11 of these 32 numbers wrong -- NE, CIN, CLE, PIT, JAX, LAC, GB, ATL, NO, ARI and SF -- which pushed every rating derived from them off by 1.6 points.",
+  "_scale_note": "points_per_win converts a win total into a power rating: (win_total - 8.5) * points_per_win. 1.6 was the workbook's figure and it is about right -- an NFL win is worth roughly 1.5-1.7 points of team strength.",
+  "points_per_win": 1.6,
+  "totals": {
+    "BAL": 11.5, "LAR": 11.5,
+    "BUF": 10.5, "DET": 10.5, "GB": 10.5, "KC": 10.5, "LAC": 10.5, "PHI": 10.5, "SF": 10.5, "SEA": 10.5,
+    "CHI": 9.5, "CIN": 9.5, "DAL": 9.5, "DEN": 9.5, "HOU": 9.5, "JAX": 9.5, "NE": 9.5,
+    "MIN": 8.5, "PIT": 8.5, "TB": 8.5,
+    "ATL": 7.5, "CAR": 7.5, "IND": 7.5, "NO": 7.5, "NYG": 7.5, "WSH": 7.5,
+    "CLE": 6.5, "TEN": 6.5,
+    "LV": 5.5, "NYJ": 5.5,
+    "ARI": 4.5, "MIA": 4.5
+  },
+  "aliases": {"WAS": "WSH"}
+}

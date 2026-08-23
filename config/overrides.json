@@ -1,0 +1,12 @@
+{
+  "_comment": "Your own manual adjustments, on top of everything the feeds already do. The pipeline never overwrites this file. Keyed by ESPN game_id (visible on every game card and in site/data/games.json). margin_adj is in points and POSITIVE FAVOURS THE HOME TEAM. total_adj shifts the projected combined score. Injuries and weather are already applied automatically -- use this for what no feed knows: a coach resting starters in Week 18, a locker-room story, a number you simply trust more than the model's.",
+  "_example_401800000": {
+    "margin_adj": -3.0,
+    "total_adj": -1.5,
+    "note": "home QB ruled out after the Friday report -- delete this example entry"
+  },
+  "team_adjust": {
+    "_comment": "Permanent points added to a team's rating, applied every week until you remove it. Same idea as the workbook's Manual Adj column.",
+    "_example_KC": 0.0
+  }
+}

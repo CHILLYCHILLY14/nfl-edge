@@ -1,0 +1,2 @@
+Simulated state written by tools/make_demo.py.
+`python -m pipeline.build` (without --offline) deletes this whole directory before its first live run.
