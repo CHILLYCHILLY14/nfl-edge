@@ -518,6 +518,7 @@ function gameCard(g, cand){
   const pickBlock = cand ? `<div>
       <div class="bigpick">${esc(cand.pick)}<span>${price(cand.price)}</span></div>
       ${cand.tier_note?`<div class="note" style="margin:8px 0 0;padding:8px 10px;font-size:12px">Held back from BEST BET: ${esc(cand.tier_note)}</div>`:""}
+      ${cand.held?`<div class="note" style="margin:8px 0 0;padding:8px 10px;font-size:12px;border-left-color:var(--flag)">Priced, not staked yet — ${esc(cand.hold_note||"")}.</div>`:""}
     </div>` : `<div class="bigpick" style="color:var(--ink-3);font-size:15px">No qualified play</div>`;
 
   const proj = `<div class="scoreline">
@@ -585,7 +586,7 @@ function renderBest(){
 
   const cands = (S.board||[]).filter(b => b.tier!=="PASS" && inSelection(b));
   if (!cands.length){
-    host.appendChild(el("div","empty","No qualified plays for this week. That is a result, not a failure — pass weeks are how a staking plan survives."));
+    host.appendChild(quietBoardNote());
     renderPassNear(host);
     return;
   }
@@ -597,6 +598,38 @@ function renderBest(){
     if (g) cards.appendChild(gameCard(g, cand));
   });
   host.appendChild(cards);
+}
+
+/**
+ * Explain a quiet board instead of showing an empty box.
+ *
+ * An empty page and a broken page look identical, and in late August they are
+ * very easy to confuse: the NFL has no lines up except preseason, so a board
+ * that is working perfectly shows nothing at all. Saying which of the three
+ * reasons applies costs one paragraph and saves an hour of hunting for a bug
+ * that is not there.
+ */
+function quietBoardNote(){
+  const c = (S.meta && S.meta.counts) || {};
+  const box = el("div","note");
+  const bits = [];
+
+  if (c.all_preseason){
+    bits.push("<b>It is preseason.</b> Every game currently on the board is a preseason game, and preseason is priced for reference only — never staked. Preseason results are decided by how long the starters played, which no rating model can see.");
+  }
+  if (c.upcoming_without_a_line){
+    bits.push(`<b>${c.upcoming_without_a_line} of ${c.upcoming} upcoming games have no line posted yet.</b> Books put numbers up a few days before kickoff for most games. Nothing can be priced against a market that does not exist yet.`);
+  }
+  if (c.held){
+    bits.push(`<b>${c.held} play${c.held===1?" is":"s are"} priced but held.</b> ${c.held===1?"It is":"They are"} further out than ${S.meta.bet_within_days} days, so ${c.held===1?"it is":"they are"} shown without a stake until closer to kickoff — the number will move several times before then.`);
+  }
+  if (!bits.length){
+    bits.push("<b>Nothing cleared the thresholds this week.</b> That is a result, not a failure — pass weeks are how a staking plan survives. The closest three calls are below.");
+  } else {
+    bits.push("Use the <b>Week</b> dropdown at the top to look ahead to the next slate, or the Games, Power Rankings and Simulator tabs, which work whether or not there is anything to bet.");
+  }
+  box.innerHTML = bits.join("<br><br>");
+  return box;
 }
 
 /** When nothing qualifies, show what came closest — that is the useful information. */
@@ -673,7 +706,7 @@ function renderBoard(){
       <td class="r num">${r.line_gap==null?"—":sgn(r.line_gap)}</td>
       <td class="r num">${num(r.confidence,2)}</td>
       <td class="r num ${posneg(r.ev)}">${r.ev==null?"—":sgn(r.ev*100,1)+"%"}</td>
-      <td style="color:var(--ink-3);font-size:12px;max-width:280px">${esc(r.filtered||r.tier_note||"")}</td>
+      <td style="color:var(--ink-3);font-size:12px;max-width:280px">${esc(r.filtered||r.hold_note||r.tier_note||"")}</td>
     </tr>`).join("")}</tbody></table>`;
   if (!rows.length) w.innerHTML = `<div class="empty">Nothing matches these filters.</div>`;
   w.querySelectorAll("th.sortable").forEach(th => th.onclick = () => {
