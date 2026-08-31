@@ -3950,7 +3950,7 @@
   "week": 2
  },
  "401872942:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "LEAN",
   "confidence": 0.5,
   "edge": 0.0342,
   "edge_raw": 0.04,
