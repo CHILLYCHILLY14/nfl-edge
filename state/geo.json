@@ -1,1 +1,8 @@
-{}
+{
+ "rio de janeiro|brazil": {
+  "lat": -22.90642,
+  "lon": -43.18223,
+  "matched": "geocode",
+  "roof": "open"
+ }
+}
