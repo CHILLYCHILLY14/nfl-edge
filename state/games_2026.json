@@ -2255,8 +2255,8 @@
    "book": "DraftKings",
    "details": "LAR -3.5",
    "keyless": true,
-   "ml_away": 160.0,
-   "ml_home": -192.0,
+   "ml_away": 164.0,
+   "ml_home": -198.0,
    "over_price": -105.0,
    "priced_markets": [
     "ML",
@@ -2759,8 +2759,8 @@
    "book": "DraftKings",
    "details": "LAC -10.5",
    "keyless": true,
-   "ml_away": 425.0,
-   "ml_home": -575.0,
+   "ml_away": 455.0,
+   "ml_home": -625.0,
    "over_price": -115.0,
    "priced_markets": [
     "ML",
