@@ -29,6 +29,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A queued deployment must include data committed by the refresh.
+          ref: main
 
       - name: Package the site
         uses: actions/upload-pages-artifact@v3
