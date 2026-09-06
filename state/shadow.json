@@ -950,7 +950,7 @@
   "week": 1
  },
  "401872922:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0255,
   "edge_raw": 0.0277,
@@ -1175,7 +1175,7 @@
   "week": 1
  },
  "401872923:TOTAL:under": {
-  "closing_tier": "LEAN",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0381,
   "edge_raw": 0.047,
@@ -1300,7 +1300,7 @@
   "week": 1
  },
  "401872924:TOTAL:over": {
-  "closing_tier": "LEAN",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0442,
   "edge_raw": 0.061,
@@ -1475,7 +1475,7 @@
   "week": 1
  },
  "401872925:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0286,
   "edge_raw": 0.0317,
@@ -1550,7 +1550,7 @@
   "week": 1
  },
  "401872926:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0214,
   "edge_raw": 0.0226,
@@ -1775,7 +1775,7 @@
   "week": 1
  },
  "401872927:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0185,
   "edge_raw": 0.0192,
@@ -2525,7 +2525,7 @@
   "week": 2
  },
  "401872932:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0321,
   "edge_raw": 0.0367,
@@ -3075,7 +3075,7 @@
   "week": 2
  },
  "401872936:ML:home": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0216,
   "edge_raw": 0.0228,
@@ -3950,7 +3950,7 @@
   "week": 2
  },
  "401872942:ML:away": {
-  "closing_tier": "LEAN",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0342,
   "edge_raw": 0.04,
@@ -4075,7 +4075,7 @@
   "week": 2
  },
  "401872943:ATS:home": {
-  "closing_tier": "LEAN",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.04,
   "edge_raw": 0.0508,
@@ -4125,7 +4125,7 @@
   "week": 2
  },
  "401872943:ML:home": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0387,
   "edge_raw": 0.0481,
@@ -4400,7 +4400,7 @@
   "week": 2
  },
  "401872945:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0349,
   "edge_raw": 0.0412,
@@ -4700,7 +4700,7 @@
   "week": 2
  },
  "401872947:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0108,
   "edge_raw": 0.0109,
@@ -4850,7 +4850,7 @@
   "week": 3
  },
  "401872948:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0371,
   "edge_raw": 0.0451,
@@ -5475,7 +5475,7 @@
   "week": 3
  },
  "401872952:ML:home": {
-  "closing_tier": "LEAN",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.048,
   "edge_raw": 0.0739,
@@ -5675,7 +5675,7 @@
   "week": 3
  },
  "401872953:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0391,
   "edge_raw": 0.049,
@@ -5750,7 +5750,7 @@
   "week": 3
  },
  "401872954:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0158,
   "edge_raw": 0.0162,
@@ -5925,7 +5925,7 @@
   "week": 3
  },
  "401872955:ML:home": {
-  "closing_tier": "PASS",
+  "closing_tier": "LEAN",
   "confidence": 0.5,
   "edge": 0.018,
   "edge_raw": 0.0187,
@@ -6300,7 +6300,7 @@
   "week": 3
  },
  "401872958:ATS:away": {
-  "closing_tier": "LEAN",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0436,
   "edge_raw": 0.0593,
@@ -6350,7 +6350,7 @@
   "week": 3
  },
  "401872958:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0415,
   "edge_raw": 0.054,
