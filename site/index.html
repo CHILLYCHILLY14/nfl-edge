@@ -585,7 +585,7 @@ function gameCard(g, cand){
       </div></div></details>` : ""}`;
 
   const card = el("div", `card tier-${tierClass(tier)}`);
-  card.innerHTML = head + pickBlock + proj + stats4 + why + detail;
+  card.innerHTML = head + pickBlock + proj + stats4 + why + (cand?.qualification ? `<p class="why">${esc(cand.qualification)}</p>` : "") + detail;
   return card;
 }
 
@@ -1321,73 +1321,9 @@ function accTable(obj, label){
 }
 
 function renderAccuracy(){
-  const host = $("#p-accuracy");
-  host.innerHTML = "";
-  const p = S.performance;
-  host.appendChild(el("div","panel-head",
-    `<div><h2>Accuracy &amp; tier performance</h2><p>Every call the model has ever made is graded here at a flat one unit — including the passes. That is the only way to test whether the labels mean anything: if PASS plays win as often as GOOD ones, the tiering is decoration and the staking plan is built on sand. A normal bet log cannot tell you that, because it never records the bets you did not make.</p></div>`));
-
-  if (!p || (!p.settled_calls && !(p.game_forecasts||{}).graded)){
-    host.appendChild(el("div","empty","No graded games yet. This fills in automatically as games go final."));
-    return;
-  }
-  if (!p.settled_calls){
-    renderForecasts(host, p.game_forecasts);
-    host.appendChild(el("div","empty","No graded bets yet — the tier tables below fill in once the model starts qualifying plays."));
-    return;
-  }
-
-  renderForecasts(host, p.game_forecasts);
-
-  const sep = p.separation||{};
-  host.appendChild(el("div","note",
-    `<b>Does the ordering hold?</b> ${sep.sequence&&sep.sequence.length
-      ? sep.sequence.map(s => `${esc(s.tier)} ${pct(s.win_pct,1)}`).join(" → ")
-      : "not enough data yet"}. ${sep.ordering_holds===true
-        ? "Each tier is beating the one below it, which is what the labels claim."
-        : sep.ordering_holds===false
-          ? "<b>The ordering is broken</b> — a lower tier is currently outperforming a higher one. Either it is variance or the thresholds are labelling noise; check again after another few dozen calls."
-          : esc(sep.note||"")}
-     Brier score <b class="mono">${num(p.brier,4)}</b> (0.25 is a coin flip; lower is better).`));
-
-  host.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">By tier</h2>
-    <p>"Needed" is the win rate the prices actually demanded — beating it is what makes money, not beating 50%.</p></div>`));
-  host.appendChild(el("div",null,accTable(p.by_tier,"Tier")));
-
-  host.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">By market</h2></div>`));
-  host.appendChild(el("div",null,accTable(p.by_market,"Market")));
-
-  const grid = el("div","two");
-  const left = el("div");
-  left.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">Calibration</h2>
-    <p>When the model says 58%, does 58% happen? The gap column is what matters.</p></div>`));
-  left.insertAdjacentHTML("beforeend", (p.calibration||[]).length ? `<div class="tablewrap"><table style="min-width:0">
-    <thead><tr><th>Model said</th><th class="r">Calls</th><th class="r">Predicted</th><th class="r">Actual</th><th class="r">Gap</th></tr></thead>
-    <tbody>${p.calibration.map(c => `<tr><td class="num">${esc(c.bucket)}</td>
-      <td class="r num">${c.n}</td><td class="r num">${pct(c.predicted)}</td>
-      <td class="r num"><b>${pct(c.actual)}</b></td>
-      <td class="r num ${posneg(c.gap)}">${sgn(c.gap*100,1)}</td></tr>`).join("")}</tbody></table></div>`
-    : `<div class="empty">Not enough graded calls.</div>`);
-  const right = el("div");
-  right.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">By confidence</h2>
-    <p>The model's own trust in a game, against what happened.</p></div>`));
-  right.insertAdjacentHTML("beforeend", accTable(p.by_confidence,"Confidence"));
-  grid.appendChild(left); grid.appendChild(right);
-  host.appendChild(grid);
-
-  const grid2 = el("div","two");
-  const a = el("div");
-  a.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">Favourites vs underdogs</h2></div>`));
-  a.insertAdjacentHTML("beforeend", accTable(p.by_fav_dog,"Side"));
-  const b = el("div");
-  b.appendChild(el("div","panel-head",`<div><h2 style="font-size:17px">By week</h2></div>`));
-  b.insertAdjacentHTML("beforeend", accTable(p.by_week,"Week"));
-  grid2.appendChild(a); grid2.appendChild(b);
-  host.appendChild(grid2);
+  document.getElementById("p-accuracy").innerHTML = '<div data-model-accuracy></div>';
 }
 
-/** Does the model predict football games? The one measurement that decides
- *  whether anything else on this page is worth reading. */
 function renderForecasts(host, f){
   if (!f || !f.graded) return;
   const L = f.latest_forecast || {}, F = f.first_forecast || {};
@@ -1614,5 +1550,6 @@ async function boot(again){
 }
 boot(false);
 </script>
+<script src="model-accuracy.js"></script>
 </body>
 </html>

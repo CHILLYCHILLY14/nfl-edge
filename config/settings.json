@@ -6,7 +6,6 @@
   "currency": "CAD",
   "currency_symbol": "C$",
   "timezone": "America/Toronto",
-
   "bankroll": {
     "starting": 500.0,
     "kelly_fraction": 0.25,
@@ -16,10 +15,9 @@
     "size_off": "settled",
     "_size_off_note": "'settled' sizes off the bankroll implied by settled bets only, so a stake never depends on the outcome of the bet it is sizing. 'starting' always sizes off the starting bankroll, like the workbook did."
   },
-
   "tiers": {
-    "_note": "Edge = model probability minus the break-even probability implied by the price you are actually getting, AFTER compression and the selection haircut below. These are small numbers on purpose -- see edge_compression.",
-    "best_bet": 0.045,
+    "_note": "Tier input is compressed expected return per unit at the offered price, capped by no-vig model value, minus selection and confidence reserves. Probability edge is published separately. Version 2026-09-06-ev2; historical tiers stay frozen.",
+    "best_bet": 0.04,
     "good": 0.028,
     "lean": 0.015,
     "_nfl_note": "Far lower than the college thresholds, because the NFL market is the sharpest in North American sport: 32 teams, enormous handle, every book pricing the same 16 games all week. Real NFL edges live between 1% and 4%. A model reporting a 12% edge on a Sunday side has found a bug, not an opportunity.",
@@ -34,9 +32,9 @@
       "require_no_stale_odds": true,
       "max_adverse_line_move": 1.0,
       "_adverse_move_note": "Points the market may move AGAINST our side since we first saw the line before BEST BET is withdrawn. The market moving away from you after you form an opinion is the clearest signal available that the opinion is the stale one."
-    }
+    },
+    "_best_reachability_note": "4% clears the 5.5% compression ceiling minus the 1% selection reserve at mature confidence. The previous 4.5% threshold equalled the unattainable asymptote. Existing BEST data/price/movement locks also apply."
   },
-
   "model": {
     "projection_blend": 0.55,
     "_projection_blend_note": "How much of the model's DISAGREEMENT with the market line survives into the number it actually bets. 0.55 keeps just over half. The market spread is the single best public estimate of a game, so the model's job is to nudge it, not to replace it. This is where the humility belongs -- it is legible ('our line vs their line') in a way that blending raw probabilities never is.",
@@ -78,9 +76,10 @@
     "early_season_shrink": 0.5,
     "_early_season_shrink_note": "How hard a team's current-season rating is pulled back toward its preseason prior before it has min_games_for_full_confidence games played.",
     "selection_haircut": 0.01,
-    "_selection_haircut_note": "Winner's-curse conservatism, subtracted from every estimated edge before tiering. You only bet where the model disagrees with the market, which is exactly where the model's own error is largest, so selected edges are overstated even when the model is calibrated across all games. Raise it to bet less and more selectively; re-measure it with `python -m pipeline.backtest` rather than trusting this number."
+    "_selection_haircut_note": "Winner's-curse conservatism, subtracted from every estimated edge before tiering. You only bet where the model disagrees with the market, which is exactly where the model's own error is largest, so selected edges are overstated even when the model is calibrated across all games. Raise it to bet less and more selectively; re-measure it with `python -m pipeline.backtest` rather than trusting this number.",
+    "confidence_penalty_max": 0.018,
+    "_confidence_penalty_note": "Bounded expected-return reserve: (1-confidence) \u00d7 1.8%, plus the selection haircut. Confidence never multiplies the tier thresholds."
   },
-
   "ratings": {
     "ridge_lambda": 14.0,
     "mov_cap": 24,
@@ -95,7 +94,6 @@
     "_market_spread_ratings_note": "Solve a power rating per team from the posted point spreads and use it as the early-season prior, fading it out as each team plays. In Week 2 the market's opinion -- which has already priced the draft, free agency and the quarterback's ankle, with real money behind it -- is worth more than the model's own one-game sample.",
     "_win_totals_note": "Blend the preseason prior with the market's own 2026 win totals from config/win_totals.json. The market's preseason opinion is better than last season's results alone, which is exactly why the workbook seeded ratings from win totals in the first place."
   },
-
   "injuries": {
     "enabled": true,
     "_note": "Auto-adjustment from ESPN's injury feed, QB-weighted. Every point applied is shown on the game card and written into the JSON, so nothing moves invisibly.",
@@ -140,17 +138,28 @@
     "starter_snap_rank": 1,
     "depth_chart_enabled": true
   },
-
   "weather": {
     "enabled": true,
     "provider": "open-meteo",
     "_provider_note": "Open-Meteo is keyless, free, and does not rate-limit a job that asks for 16 forecasts twice a day. No account, no secret, nothing to expire.",
     "forecast_days": 16,
     "wind_thresholds": [
-      [12, -0.8],
-      [16, -1.8],
-      [20, -3.0],
-      [25, -4.5]
+      [
+        12,
+        -0.8
+      ],
+      [
+        16,
+        -1.8
+      ],
+      [
+        20,
+        -3.0
+      ],
+      [
+        25,
+        -4.5
+      ]
     ],
     "_wind_note": "[mph, points off the projected total]. Wind is the only weather variable with a large, repeatable effect on NFL scoring -- it kills the deep passing game and the kicking game together. Rain and cold matter far less than television makes you believe.",
     "precip_prob_threshold": 55,
@@ -162,13 +171,11 @@
     "heat_total_adj": -0.5,
     "indoor_ignores_weather": true
   },
-
   "markets": {
     "moneyline": true,
     "spread": true,
     "total": true
   },
-
   "filters": {
     "_note": "Bets that fail these are still shown, with the reason, but are never auto-logged to the ledger.",
     "min_price": -350,
@@ -184,7 +191,6 @@
     "_bet_preseason_note": "Preseason games are priced and displayed but never tiered as a play. Starter snap counts, not team strength, decide preseason games, and no rating model sees the coach's snap plan.",
     "bet_postseason": true
   },
-
   "data": {
     "odds_provider_priority": [
       "DraftKings",

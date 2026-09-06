@@ -80,6 +80,7 @@ jobs:
         run: |
           git config user.name  "nfl-edge bot"
           git config user.email "actions@github.com"
+          git add state/model_accuracy.json site/data/accuracy.json
           git add -A state site/data NFL_Edge_Model.xlsx
           git diff --staged --quiet || git commit -m "Refresh: $(date -u '+%Y-%m-%d %H:%M UTC')"
           # Another run may have pushed while this one was working.

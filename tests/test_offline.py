@@ -263,7 +263,8 @@ class TestTiering(unittest.TestCase):
         # exactly on the GOOD line at full confidence.
         edge = CFG["tiers"]["good"] + CFG["model"]["selection_haircut"] + 0.001
         self.assertEqual(M.tier_for(edge, CFG, 1.0, 2.0, -110)[0], "GOOD")
-        self.assertEqual(M.tier_for(edge, CFG, 0.4, 2.0, -110)[0], "PASS")
+        self.assertEqual(M.tier_for(edge, CFG, 0.4, 2.0, -110)[0], "LEAN")
+        self.assertEqual(M.tier_for(edge, CFG, 0, 2.0, -110)[0], "PASS")
 
     def test_preseason_confidence_is_floored(self):
         self.assertLessEqual(M.confidence_score(8, 8, True, CFG, season_type=1), 0.2)

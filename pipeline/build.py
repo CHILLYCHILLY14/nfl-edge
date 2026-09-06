@@ -17,6 +17,8 @@ a schedule, whether or not anyone is awake.
 
 from __future__ import annotations
 
+from . import game_history
+
 import argparse
 import datetime as dt
 import json
@@ -329,13 +331,31 @@ def price_game(g: dict, proj: dict, cfg: dict, conf: float, stale: bool,
             row["model_prob_uncalibrated"] = before
             row["model_prob"] = round(calibrate.apply(before, calib), 4)
             raw_edge = row["model_prob"] - row["breakeven"]
-        row["edge_raw"] = round(raw_edge, 4)
-        row["edge"] = round(M.compress_edge(raw_edge, cfg), 4)
+        # Both inputs are expected return per unit, not probability points.
+        # Qualify against the smaller of no-vig value and the offered-price EV.
+        push = float(row.get("push_prob") or 0.0)
+        fair = float(row.get("market_fair_prob") or 0.0)
+        decimal = M.american_to_decimal(row["price"])
+        row["probability_edge"] = row["model_prob"] - row["breakeven"]
+        row["ev"] = (1-push) * (row["model_prob"] * decimal - 1)
+        row["edge_raw"] = row["model_prob"] / fair - 1 if fair > 0 else 0.0
+        row["edge"] = M.compress_edge(row["edge_raw"], cfg)
+        row["edge_real"] = M.compress_edge(row["ev"], cfg)
+        row["edge_real_raw"] = row["ev"]
+        row["edge_price"] = row["edge_real"] - row["edge"]
+        row["edge_unit"] = "expected_return"
+        row["tier_version"] = "2026-09-06-ev2"
+        row["action_edge"] = M.risk_adjusted_edge(min(row["edge"], row["edge_real"]), cfg, conf)
+        row["qualification"] = (f"Adjusted expected return {row['action_edge']:.2%}; "
+                                f"GOOD needs {float(cfg['tiers']['good']):.2%}, "
+                                f"BEST needs {float(cfg['tiers']['best_bet']):.2%}. "
+                                f"Confidence {conf:.0%}; raw offered-price EV {row['ev']:.2%}.")
         row["line_gap"] = line_gap
         row["adverse_move"] = adverse_move(move or {}, row["market"], row["side"])
-        tier, why = M.tier_for(row["edge"], cfg, conf, line_gap=line_gap,
+        tier, why = M.tier_for(min(row["edge"], row["edge_real"]), cfg, conf, line_gap=line_gap,
                                price=row["price"], stale=stale,
                                adverse=row["adverse_move"])
+        row["model_tier"] = tier
         row["tier"] = tier
         if why:
             row["tier_note"] = why
@@ -866,6 +886,14 @@ def main() -> int:
     print(f"   priced {len(upcoming)} games -> {len(board)} market lines, {plays} actionable")
     print(f"   odds feed: {odds_health['status']} — {odds_health['priced_games']}/"
           f"{odds_health['line_games']} games with posted lines have real prices")
+
+    for card in game_cards:
+        ph, pt = M.moneyline_probability(card["projection"]["mu"], float(cfg["model"]["margin_sd"]), bool(cfg["model"]["use_key_numbers"]), True)
+        card["p_home"] = ph / (1-pt) if pt < 1 else .5
+    game_history.update(os.path.join(store.STATE_DIR, "model_accuracy.json"),
+                        os.path.join(SITE_DATA, "accuracy.json"), board, game_cards,
+                        games, "NFL", historical=store.load("shadow.json", {}).values(),
+                        old_forecasts=store.load("forecasts.json", {}))
 
     # 9. Forecast log: what the model said about each game, bet or no bet.
     fc_log = store.load("forecasts.json", {})
