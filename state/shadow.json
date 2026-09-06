@@ -1475,7 +1475,7 @@
   "week": 1
  },
  "401872925:TOTAL:under": {
-  "closing_tier": "LEAN",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0286,
   "edge_raw": 0.0317,
