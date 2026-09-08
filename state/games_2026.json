@@ -2479,8 +2479,8 @@
    "book": "DraftKings",
    "details": "CHI -3",
    "keyless": true,
-   "ml_away": -148.0,
-   "ml_home": 124.0,
+   "ml_away": -155.0,
+   "ml_home": 130.0,
    "over_price": -112.0,
    "priced_markets": [
     "ML",
@@ -3037,7 +3037,7 @@
   "neutral": false,
   "odds": {
    "book": "DraftKings",
-   "details": "KC -3",
+   "details": "KC -2.5",
    "keyless": true,
    "ml_away": 124.0,
    "ml_home": -148.0,
@@ -3048,9 +3048,9 @@
     "TOTAL"
    ],
    "source": "ESPN public feed",
-   "spread_home": -3.0,
-   "spread_price_away": -120.0,
-   "spread_price_home": 100.0,
+   "spread_home": -2.5,
+   "spread_price_away": 100.0,
+   "spread_price_home": -120.0,
    "total": 43.5,
    "under_price": -115.0
   },
@@ -13398,8 +13398,8 @@
    "book": "DraftKings",
    "details": "BAL -6",
    "keyless": true,
-   "ml_away": 215.0,
-   "ml_home": -265.0,
+   "ml_away": 210.0,
+   "ml_home": -258.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
