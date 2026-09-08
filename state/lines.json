@@ -1779,6 +1779,18 @@
    "total": 42.5,
    "ts": "2026-09-08T16:04:16+00:00",
    "under_price": -115.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": 154.0,
+   "ml_home": -185.0,
+   "over_price": -105.0,
+   "spread_home": -3.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-09-08T20:03:58+00:00",
+   "under_price": -115.0
   }
  ],
  "401872659": [
@@ -2859,6 +2871,18 @@
    "total": 44.5,
    "ts": "2026-09-08T16:04:16+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": -115.0,
+   "ml_home": -105.0,
+   "over_price": -115.0,
+   "spread_home": 1.5,
+   "spread_price_away": -102.0,
+   "spread_price_home": -118.0,
+   "total": 44.5,
+   "ts": "2026-09-08T20:03:58+00:00",
+   "under_price": -105.0
   }
  ],
  "401872661": [
@@ -75765,6 +75789,18 @@
    "total": 43.5,
    "ts": "2026-09-08T16:04:16+00:00",
    "under_price": -110.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": 100.0,
+   "ml_home": -120.0,
+   "over_price": -110.0,
+   "spread_home": -1.5,
+   "spread_price_away": -115.0,
+   "spread_price_home": -105.0,
+   "total": 43.5,
+   "ts": "2026-09-08T20:03:58+00:00",
+   "under_price": -110.0
   }
  ],
  "401873056": [
@@ -103568,6 +103604,18 @@
    "spread_price_home": -110.0,
    "total": 41.5,
    "ts": "2026-09-08T16:04:16+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": -125.0,
+   "ml_home": 105.0,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 41.5,
+   "ts": "2026-09-08T20:03:58+00:00",
    "under_price": -110.0
   }
  ],
@@ -135242,6 +135290,18 @@
    "spread_price_home": -110.0,
    "total": 42.5,
    "ts": "2026-09-08T16:04:16+00:00",
+   "under_price": -110.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": -122.0,
+   "ml_home": 102.0,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
+   "total": 42.5,
+   "ts": "2026-09-08T20:03:58+00:00",
    "under_price": -110.0
   }
  ],
