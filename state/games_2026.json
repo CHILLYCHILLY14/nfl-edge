@@ -2255,8 +2255,8 @@
    "book": "DraftKings",
    "details": "LAR -3.5",
    "keyless": true,
-   "ml_away": 164.0,
-   "ml_home": -198.0,
+   "ml_away": 170.0,
+   "ml_home": -205.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -2265,8 +2265,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -3.5,
-   "spread_price_away": -108.0,
-   "spread_price_home": -112.0,
+   "spread_price_away": -102.0,
+   "spread_price_home": -118.0,
    "total": 48.5,
    "under_price": -112.0
   },
@@ -2321,8 +2321,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -3.5,
-   "spread_price_away": -110.0,
-   "spread_price_home": -110.0,
+   "spread_price_away": -108.0,
+   "spread_price_home": -112.0,
    "total": 42.5,
    "under_price": -115.0
   },
@@ -2535,8 +2535,8 @@
    "book": "DraftKings",
    "details": "JAX -8.5",
    "keyless": true,
-   "ml_away": 350.0,
-   "ml_home": -455.0,
+   "ml_away": 360.0,
+   "ml_home": -470.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
@@ -2759,9 +2759,9 @@
    "book": "DraftKings",
    "details": "LAC -9.5",
    "keyless": true,
-   "ml_away": 370.0,
-   "ml_home": -485.0,
-   "over_price": -105.0,
+   "ml_away": 390.0,
+   "ml_home": -520.0,
+   "over_price": -102.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -2769,10 +2769,10 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -9.5,
-   "spread_price_away": -112.0,
-   "spread_price_home": -108.0,
+   "spread_price_away": -105.0,
+   "spread_price_home": -115.0,
    "total": 47.5,
-   "under_price": -115.0
+   "under_price": -118.0
   },
   "season": 2026,
   "season_type": 2,
@@ -2873,7 +2873,7 @@
    "keyless": true,
    "ml_away": 154.0,
    "ml_home": -185.0,
-   "over_price": -102.0,
+   "over_price": -115.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -2883,8 +2883,8 @@
    "spread_home": -3.5,
    "spread_price_away": -115.0,
    "spread_price_home": -105.0,
-   "total": 41.5,
-   "under_price": -118.0
+   "total": 40.5,
+   "under_price": -105.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3039,8 +3039,8 @@
    "book": "DraftKings",
    "details": "KC -2.5",
    "keyless": true,
-   "ml_away": 124.0,
-   "ml_home": -148.0,
+   "ml_away": 130.0,
+   "ml_home": -155.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
