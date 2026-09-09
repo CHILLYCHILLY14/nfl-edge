@@ -2993,8 +2993,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": 3.0,
-   "spread_price_away": -108.0,
-   "spread_price_home": -112.0,
+   "spread_price_away": -105.0,
+   "spread_price_home": -115.0,
    "total": 48.5,
    "under_price": -115.0
   },
