@@ -1,14 +1,17 @@
 {
  "401872656:ATS:away": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0089,
   "edge_raw": 0.0089,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:ATS:away",
   "line": -3.5,
   "line_gap": -0.85,
@@ -17,23 +20,26 @@
   "model_prob": 0.5327,
   "pick": "NE +3.5",
   "price": -110.0,
-  "result": "Pending",
+  "result": "Win",
   "season_type": 2,
   "side": "away",
   "tier": "PASS",
-  "units": null,
+  "units": 0.909,
   "week": 1
  },
  "401872656:ATS:home": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.0425,
   "edge_raw": -0.0566,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:ATS:home",
   "line": -3.5,
   "line_gap": -0.85,
@@ -42,23 +48,26 @@
   "model_prob": 0.4673,
   "pick": "SEA -3.5",
   "price": -110.0,
-  "result": "Pending",
+  "result": "Loss",
   "season_type": 2,
   "side": "home",
   "tier": "PASS",
-  "units": null,
+  "units": -1.0,
   "week": 1
  },
  "401872656:ML:away": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0109,
   "edge_raw": 0.0111,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:ML:away",
   "line": null,
   "line_gap": -0.85,
@@ -67,23 +76,26 @@
   "model_prob": 0.4111,
   "pick": "NE ML",
   "price": 150.0,
-  "result": "Pending",
+  "result": "Loss",
   "season_type": 2,
   "side": "away",
   "tier": "PASS",
-  "units": null,
+  "units": -1.0,
   "week": 1
  },
  "401872656:ML:home": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.0414,
   "edge_raw": -0.0539,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:ML:home",
   "line": null,
   "line_gap": -0.85,
@@ -92,23 +104,26 @@
   "model_prob": 0.5889,
   "pick": "SEA ML",
   "price": -180.0,
-  "result": "Pending",
+  "result": "Win",
   "season_type": 2,
   "side": "home",
   "tier": "PASS",
-  "units": null,
+  "units": 0.556,
   "week": 1
  },
  "401872656:TOTAL:over": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.0366,
   "edge_raw": -0.0441,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:TOTAL:over",
   "line": 44.5,
   "line_gap": -0.77,
@@ -117,23 +132,26 @@
   "model_prob": 0.4797,
   "pick": "Over 44.5",
   "price": -110.0,
-  "result": "Pending",
+  "result": "Loss",
   "season_type": 2,
   "side": "over",
   "tier": "PASS",
-  "units": null,
+  "units": -1.0,
   "week": 1
  },
  "401872656:TOTAL:under": {
+  "actual_margin": 3,
+  "actual_total": 23,
   "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.0035,
   "edge_raw": -0.0035,
   "filtered": null,
+  "final_score": "NE 10 \u2014 SEA 13",
   "first_seen": "2026-08-23T19:56:25+00:00",
   "game_date": "2026-09-10T00:20Z",
   "game_id": "401872656",
-  "graded_at": null,
+  "graded_at": "2026-09-10T05:13:58+00:00",
   "id": "401872656:TOTAL:under",
   "line": 44.5,
   "line_gap": -0.77,
@@ -142,11 +160,11 @@
   "model_prob": 0.5203,
   "pick": "Under 44.5",
   "price": -110.0,
-  "result": "Pending",
+  "result": "Win",
   "season_type": 2,
   "side": "under",
   "tier": "PASS",
-  "units": null,
+  "units": 0.909,
   "week": 1
  },
  "401872657:ATS:away": {
@@ -200,7 +218,7 @@
   "week": 1
  },
  "401872657:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0029,
   "edge_raw": 0.0029,
@@ -1100,7 +1118,7 @@
   "week": 1
  },
  "401872923:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0113,
   "edge_raw": 0.0115,
@@ -1175,7 +1193,7 @@
   "week": 1
  },
  "401872923:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0381,
   "edge_raw": 0.047,
@@ -1475,7 +1493,7 @@
   "week": 1
  },
  "401872925:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0286,
   "edge_raw": 0.0317,
@@ -1775,7 +1793,7 @@
   "week": 1
  },
  "401872927:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0185,
   "edge_raw": 0.0192,
@@ -2375,7 +2393,7 @@
   "week": 1
  },
  "401872931:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.001,
   "edge_raw": -0.001,
@@ -2525,7 +2543,7 @@
   "week": 2
  },
  "401872932:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0321,
   "edge_raw": 0.0367,
@@ -3350,7 +3368,7 @@
   "week": 2
  },
  "401872938:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0186,
   "edge_raw": 0.0194,
@@ -3800,7 +3818,7 @@
   "week": 2
  },
  "401872941:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0133,
   "edge_raw": 0.0136,
@@ -4550,7 +4568,7 @@
   "week": 2
  },
  "401872946:ML:away": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0003,
   "edge_raw": 0.0003,
@@ -5675,7 +5693,7 @@
   "week": 3
  },
  "401872953:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0391,
   "edge_raw": 0.049,
@@ -6675,7 +6693,7 @@
   "week": 3
  },
  "401872960:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0248,
   "edge_raw": 0.0267,
@@ -7425,7 +7443,7 @@
   "week": 4
  },
  "401872965:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0537,
   "edge_raw": 0.121,
@@ -7500,7 +7518,7 @@
   "week": 4
  },
  "401872966:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0526,
   "edge_raw": 0.1051,
@@ -8550,7 +8568,7 @@
   "week": 4
  },
  "401872973:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0528,
   "edge_raw": 0.1067,
@@ -9225,7 +9243,7 @@
   "week": 4
  },
  "401872977:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0541,
   "edge_raw": 0.1308,
