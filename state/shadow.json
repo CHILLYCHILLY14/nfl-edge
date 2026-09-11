@@ -3111,7 +3111,7 @@
   "week": 2
  },
  "401872936:ML:home": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0216,
   "edge_raw": 0.0228,
@@ -3836,7 +3836,7 @@
   "week": 2
  },
  "401872941:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0133,
   "edge_raw": 0.0136,
