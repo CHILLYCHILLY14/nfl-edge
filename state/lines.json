@@ -3255,6 +3255,18 @@
    "total": 44.5,
    "ts": "2026-09-12T05:12:57+00:00",
    "under_price": -105.0
+  },
+  {
+   "book": "DraftKings",
+   "ml_away": -118.0,
+   "ml_home": -102.0,
+   "over_price": -110.0,
+   "spread_home": 1.5,
+   "spread_price_away": -108.0,
+   "spread_price_home": -112.0,
+   "total": 44.5,
+   "ts": "2026-09-12T12:04:23+00:00",
+   "under_price": -110.0
   }
  ],
  "401872661": [
