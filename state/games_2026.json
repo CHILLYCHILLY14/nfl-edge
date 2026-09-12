@@ -2311,8 +2311,8 @@
    "book": "DraftKings",
    "details": "PIT -6",
    "keyless": true,
-   "ml_away": 215.0,
-   "ml_home": -265.0,
+   "ml_away": 220.0,
+   "ml_home": -270.0,
    "over_price": -105.0,
    "priced_markets": [
     "ML",
@@ -2601,8 +2601,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -7.0,
-   "spread_price_away": -112.0,
-   "spread_price_home": -108.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
    "total": 49.5,
    "under_price": -108.0
   },
@@ -3039,8 +3039,8 @@
    "book": "DraftKings",
    "details": "KC -2.5",
    "keyless": true,
-   "ml_away": 124.0,
-   "ml_home": -148.0,
+   "ml_away": 120.0,
+   "ml_home": -142.0,
    "over_price": -115.0,
    "priced_markets": [
     "ML",
@@ -3049,8 +3049,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -2.5,
-   "spread_price_away": -102.0,
-   "spread_price_home": -118.0,
+   "spread_price_away": -105.0,
+   "spread_price_home": -115.0,
    "total": 43.5,
    "under_price": -105.0
   },

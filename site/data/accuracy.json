@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-09-12T12:04:26.180309+00:00",
+ "generated_at": "2026-09-12T16:03:16.896841+00:00",
  "label": "NFL prediction accuracy",
  "method": "First pre-event snapshot, frozen line and price. All model picks, including PASS/AVOID and unstaked picks. One preferred side per event/market in pick statistics; the complete priced-side audit is separate. One hypothetical unit per pick; no actual wagers are created. Missing results remain pending.",
  "overall": {
