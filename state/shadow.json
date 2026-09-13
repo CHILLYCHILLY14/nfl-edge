@@ -611,7 +611,7 @@
   "week": 1
  },
  "401872659:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": -0.006,
   "edge_raw": -0.006,
@@ -2036,7 +2036,7 @@
   "week": 1
  },
  "401872929:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": -0.0017,
   "edge_raw": -0.0017,
