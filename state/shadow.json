@@ -2561,7 +2561,7 @@
   "week": 2
  },
  "401872932:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0321,
   "edge_raw": 0.0367,
@@ -3111,7 +3111,7 @@
   "week": 2
  },
  "401872936:ML:home": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0216,
   "edge_raw": 0.0228,
@@ -7511,7 +7511,7 @@
   "week": 4
  },
  "401872965:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0537,
   "edge_raw": 0.121,
@@ -9111,7 +9111,7 @@
   "week": 4
  },
  "401872976:ML:home": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0536,
   "edge_raw": 0.1189,
