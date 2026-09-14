@@ -1,33 +1,33 @@
 {
  "schema": 1,
- "generated_at": "2026-09-13T20:03:52.973303+00:00",
+ "generated_at": "2026-09-14T00:21:44.903785+00:00",
  "label": "NFL prediction accuracy",
  "method": "First pre-event snapshot, frozen line and price. All model picks, including PASS/AVOID and unstaked picks. One preferred side per event/market in pick statistics; the complete priced-side audit is separate. One hypothetical unit per pick; no actual wagers are created. Missing results remain pending.",
  "overall": {
   "logged": 243,
-  "wins": 34,
-  "losses": 22,
+  "wins": 44,
+  "losses": 48,
   "pushes": 1,
   "voids": 0,
-  "settled": 57,
-  "pending": 186,
-  "win_rate": 0.6071428571428571,
-  "units": 12.061,
-  "roi": 0.21159417543859652,
-  "brier": 0.24917
+  "settled": 93,
+  "pending": 150,
+  "win_rate": 0.4782608695652174,
+  "units": -1.387,
+  "roi": -0.01491581720430106,
+  "brier": 0.24646
  },
  "all_calls": {
   "logged": 486,
-  "wins": 56,
-  "losses": 56,
+  "wins": 92,
+  "losses": 92,
   "pushes": 2,
   "voids": 0,
-  "settled": 114,
-  "pending": 372,
+  "settled": 186,
+  "pending": 300,
   "win_rate": 0.5,
-  "units": -3.312,
-  "roi": -0.029053026315789456,
-  "brier": 0.24917
+  "units": -6.558,
+  "roi": -0.03525831720430106,
+  "brier": 0.24646
  },
  "by_tier": {
   "GOOD": {
@@ -46,69 +46,69 @@
   "LEAN": {
    "logged": 4,
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "pushes": 0,
    "voids": 0,
-   "settled": 0,
-   "pending": 4,
-   "win_rate": null,
-   "units": 0,
-   "roi": null,
-   "brier": null
+   "settled": 1,
+   "pending": 3,
+   "win_rate": 0.0,
+   "units": -1,
+   "roi": -1.0,
+   "brier": 0.3551
   },
   "PASS": {
    "logged": 233,
-   "wins": 34,
-   "losses": 22,
+   "wins": 44,
+   "losses": 47,
    "pushes": 1,
    "voids": 0,
-   "settled": 57,
-   "pending": 176,
-   "win_rate": 0.6071428571428571,
-   "units": 12.061,
-   "roi": 0.21159417543859652,
-   "brier": 0.24917
+   "settled": 92,
+   "pending": 141,
+   "win_rate": 0.4835164835164835,
+   "units": -0.387,
+   "roi": -0.004208380434782574,
+   "brier": 0.24527
   }
  },
  "by_market": {
   "ATS": {
    "logged": 81,
-   "wins": 12,
-   "losses": 7,
+   "wins": 16,
+   "losses": 15,
    "pushes": 0,
    "voids": 0,
-   "settled": 19,
-   "pending": 62,
-   "win_rate": 0.631578947368421,
-   "units": 3.878,
-   "roi": 0.20408921052631582,
-   "brier": 0.24547
+   "settled": 31,
+   "pending": 50,
+   "win_rate": 0.5161290322580645,
+   "units": -0.415,
+   "roi": -0.01337548387096774,
+   "brier": 0.24659
   },
   "ML": {
    "logged": 81,
-   "wins": 11,
-   "losses": 7,
+   "wins": 13,
+   "losses": 17,
    "pushes": 1,
    "voids": 0,
-   "settled": 19,
-   "pending": 62,
-   "win_rate": 0.6111111111111112,
-   "units": 6.046,
-   "roi": 0.31820536842105257,
-   "brier": 0.25312
+   "settled": 31,
+   "pending": 50,
+   "win_rate": 0.43333333333333335,
+   "units": 1.293,
+   "roi": 0.04172129032258064,
+   "brier": 0.23616
   },
   "TOTAL": {
    "logged": 81,
-   "wins": 11,
-   "losses": 8,
+   "wins": 15,
+   "losses": 16,
    "pushes": 0,
    "voids": 0,
-   "settled": 19,
-   "pending": 62,
-   "win_rate": 0.5789473684210527,
-   "units": 2.137,
-   "roi": 0.11248794736842106,
-   "brier": 0.24914
+   "settled": 31,
+   "pending": 50,
+   "win_rate": 0.4838709677419355,
+   "units": -2.266,
+   "roi": -0.0730932580645161,
+   "brier": 0.2563
   }
  },
  "by_version": {
@@ -127,36 +127,42 @@
   },
   "legacy": {
    "logged": 194,
-   "wins": 34,
-   "losses": 22,
+   "wins": 44,
+   "losses": 48,
    "pushes": 1,
    "voids": 0,
-   "settled": 57,
-   "pending": 137,
-   "win_rate": 0.6071428571428571,
-   "units": 12.061,
-   "roi": 0.21159417543859652,
-   "brier": 0.24917
+   "settled": 93,
+   "pending": 101,
+   "win_rate": 0.4782608695652174,
+   "units": -1.387,
+   "roi": -0.01491581720430106,
+   "brier": 0.24646
   }
  },
  "calibration": [
   {
+   "bucket": "20\u201330%",
+   "n": 3,
+   "predicted": 0.25887,
+   "actual": 0.33333
+  },
+  {
    "bucket": "30\u201340%",
-   "n": 2,
-   "predicted": 0.37365,
-   "actual": 0.5
+   "n": 6,
+   "predicted": 0.37613,
+   "actual": 0.16667
   },
   {
    "bucket": "40\u201350%",
-   "n": 12,
-   "predicted": 0.44813,
-   "actual": 0.66667
+   "n": 19,
+   "predicted": 0.45783,
+   "actual": 0.47368
   },
   {
    "bucket": "50\u201360%",
-   "n": 37,
-   "predicted": 0.55786,
-   "actual": 0.54054
+   "n": 59,
+   "predicted": 0.55031,
+   "actual": 0.47458
   },
   {
    "bucket": "60\u201370%",
@@ -167,35 +173,35 @@
  ],
  "games": {
   "logged": 81,
-  "graded": 19,
-  "pending": 62,
+  "graded": 31,
+  "pending": 50,
   "winner": {
-   "n": 18,
-   "correct": 9,
-   "accuracy": 0.5
+   "n": 30,
+   "correct": 19,
+   "accuracy": 0.63333
   },
   "ats": {
-   "n": 18,
-   "correct": 11,
-   "accuracy": 0.61111
+   "n": 24,
+   "correct": 14,
+   "accuracy": 0.58333
   },
   "totals": {
-   "n": 19,
-   "correct": 11,
-   "accuracy": 0.57895
+   "n": 31,
+   "correct": 15,
+   "accuracy": 0.48387
   },
   "margin_comparison": {
-   "n": 19,
-   "model_mae": 11.31579,
-   "market_mae": 11.60526
+   "n": 31,
+   "model_mae": 11.28613,
+   "market_mae": 11.41935
   },
   "total_comparison": {
-   "n": 19,
-   "model_mae": 11.28947,
-   "market_mae": 11.39474
+   "n": 31,
+   "model_mae": 12.09677,
+   "market_mae": 11.82258
   },
-  "margin_mae": 11.31579,
-  "total_mae": 11.28947,
+  "margin_mae": 11.28613,
+  "total_mae": 12.09677,
   "brier": 0.2568
  },
  "props": {},
@@ -7816,7 +7822,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872929:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 2.0,
+   "actual_total": 46.0,
+   "final_home": 24.0,
+   "final_away": 22.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -7832,7 +7843,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872928:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 14.0,
+   "actual_total": 40.0,
+   "final_home": 27.0,
+   "final_away": 13.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -7848,7 +7864,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872927:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 17.0,
+   "actual_total": 61.0,
+   "final_home": 39.0,
+   "final_away": 22.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -7864,7 +7885,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872926:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": -12.0,
+   "actual_total": 40.0,
+   "final_home": 14.0,
+   "final_away": 26.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "call",
@@ -7884,10 +7910,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872929::TOTAL:under",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.869565,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -7907,10 +7937,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872929::TOTAL:over",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -7930,10 +7964,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872929::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.487805,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -7953,10 +7991,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872929::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -7976,10 +8018,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872929::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -7999,10 +8045,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872929::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 24.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8022,10 +8072,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872928::TOTAL:under",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8045,10 +8099,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872928::TOTAL:over",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8068,10 +8126,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872928::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.487805,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8091,10 +8153,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872928::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8114,10 +8180,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872928::ATS:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8137,10 +8207,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872928::ATS:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 27.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -8160,10 +8234,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872927::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8183,10 +8261,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872927::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8206,10 +8288,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872927::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.847458,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8229,10 +8315,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872927::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8252,10 +8342,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872927::ATS:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.980392,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8275,10 +8369,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872927::ATS:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 39.0,
+   "final_away": 22.0
   },
   {
    "kind": "call",
@@ -8298,10 +8396,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872926::TOTAL:under",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "call",
@@ -8321,10 +8423,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872926::TOTAL:over",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "call",
@@ -8344,10 +8450,14 @@
    "reason": "price -600 outside the allowed range",
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872926::ML:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "call",
@@ -8367,10 +8477,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872926::ML:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 4.4,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "call",
@@ -8390,10 +8504,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872926::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "call",
@@ -8413,10 +8531,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872926::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 14.0,
+   "final_away": 26.0
   },
   {
    "kind": "game",
@@ -8432,7 +8554,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872925:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 6.0,
+   "actual_total": 60.0,
+   "final_home": 33.0,
+   "final_away": 27.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8448,7 +8575,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872924:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": -13.0,
+   "actual_total": 33.0,
+   "final_home": 10.0,
+   "final_away": 23.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8464,7 +8596,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872923:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 1.0,
+   "actual_total": 61.0,
+   "final_home": 31.0,
+   "final_away": 30.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8480,7 +8617,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872922:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 24.0,
+   "actual_total": 44.0,
+   "final_home": 34.0,
+   "final_away": 10.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8496,7 +8638,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872661:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": -22.0,
+   "actual_total": 96.0,
+   "final_home": 37.0,
+   "final_away": 59.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8512,7 +8659,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872660:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": -5.0,
+   "actual_total": 67.0,
+   "final_home": 31.0,
+   "final_away": 36.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8528,7 +8680,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872659:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": -18.0,
+   "actual_total": 64.0,
+   "final_home": 23.0,
+   "final_away": 41.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "game",
@@ -8544,7 +8701,12 @@
    "captured_at": "2026-08-23T04:20:20+00:00",
    "version": "legacy",
    "id": "game:NFL:401872658:::",
-   "result": "Pending"
+   "result": "Graded",
+   "actual_margin": 7.0,
+   "actual_total": 33.0,
+   "final_home": 20.0,
+   "final_away": 13.0,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00"
   },
   {
    "kind": "call",
@@ -8564,10 +8726,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872925::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8587,10 +8753,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872925::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8610,10 +8780,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872925::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.505051,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8633,10 +8807,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872925::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8656,10 +8834,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872925::ATS:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.869565,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8679,10 +8861,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872925::ATS:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 33.0,
+   "final_away": 27.0
   },
   {
    "kind": "call",
@@ -8702,10 +8888,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872924::TOTAL:under",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.952381,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8725,10 +8915,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872924::TOTAL:over",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8748,10 +8942,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872924::ML:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8771,10 +8969,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872924::ML:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 1.24,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8794,10 +8996,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872924::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8817,10 +9023,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872924::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.833333,
+   "actual": null,
+   "final_home": 10.0,
+   "final_away": 23.0
   },
   {
    "kind": "call",
@@ -8840,10 +9050,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872923::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8863,10 +9077,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872923::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.847458,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8886,10 +9104,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872923::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.322581,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8909,10 +9131,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872923::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8932,10 +9158,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872923::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8955,10 +9185,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872923::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 30.0
   },
   {
    "kind": "call",
@@ -8978,10 +9212,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872922::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9001,10 +9239,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872922::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9024,10 +9266,14 @@
    "reason": "price -395 outside the allowed range",
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872922::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.253165,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9047,10 +9293,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872922::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9070,10 +9320,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872922::ATS:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9093,10 +9347,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872922::ATS:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 34.0,
+   "final_away": 10.0
   },
   {
    "kind": "call",
@@ -9116,10 +9374,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872661::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9139,10 +9401,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872661::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.869565,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9162,10 +9428,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872661::ML:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9185,10 +9455,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872661::ML:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.675676,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9208,10 +9482,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872661::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9231,10 +9509,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872661::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.847458,
+   "actual": null,
+   "final_home": 37.0,
+   "final_away": 59.0
   },
   {
    "kind": "call",
@@ -9254,10 +9536,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872660::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9277,10 +9563,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872660::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9300,10 +9590,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872660::ML:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9323,10 +9617,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872660::ML:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.847458,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9346,10 +9644,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872660::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9369,10 +9671,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872660::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.952381,
+   "actual": null,
+   "final_home": 31.0,
+   "final_away": 36.0
   },
   {
    "kind": "call",
@@ -9392,10 +9698,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872659::TOTAL:under",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9415,10 +9725,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872659::TOTAL:over",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.909091,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9438,10 +9752,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872659::ML:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9461,10 +9779,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872659::ML:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.555556,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9484,10 +9806,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872659::ATS:home",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9507,10 +9833,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872659::ATS:away",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.925926,
+   "actual": null,
+   "final_home": 23.0,
+   "final_away": 41.0
   },
   {
    "kind": "call",
@@ -9530,10 +9860,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872658::TOTAL:under",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.869565,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -9553,10 +9887,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872658::TOTAL:over",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -9576,10 +9914,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872658::ML:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.571429,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -9599,10 +9941,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872658::ML:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -9622,10 +9968,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": false,
    "id": "call:NFL:401872658::ATS:home",
-   "result": "Pending"
+   "result": "Win",
+   "units": 0.833333,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "call",
@@ -9645,10 +9995,14 @@
    "reason": null,
    "captured_at": "2026-08-23T19:56:25+00:00",
    "version": "legacy",
-   "graded_at": null,
+   "graded_at": "2026-09-14T00:21:44.893139+00:00",
    "selected": true,
    "id": "call:NFL:401872658::ATS:away",
-   "result": "Pending"
+   "result": "Loss",
+   "units": -1,
+   "actual": null,
+   "final_home": 20.0,
+   "final_away": 13.0
   },
   {
    "kind": "game",
