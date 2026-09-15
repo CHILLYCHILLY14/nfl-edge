@@ -3375,8 +3375,8 @@
    "book": "DraftKings",
    "details": "CHI -5.5",
    "keyless": true,
-   "ml_away": 190.0,
-   "ml_home": -230.0,
+   "ml_away": 195.0,
+   "ml_home": -238.0,
    "over_price": -102.0,
    "priced_markets": [
     "ML",
@@ -3442,7 +3442,7 @@
    "spread_home": -8.5,
    "spread_price_away": null,
    "spread_price_home": -110.0,
-   "total": 47.5,
+   "total": 46.5,
    "under_price": -102.0
   },
   "season": 2026,
@@ -3486,8 +3486,8 @@
    "book": "DraftKings",
    "details": "PHI -7",
    "keyless": true,
-   "ml_away": -310.0,
-   "ml_home": 250.0,
+   "ml_away": -305.0,
+   "ml_home": 245.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
@@ -3542,9 +3542,9 @@
    "book": "DraftKings",
    "details": "NE -5.5",
    "keyless": true,
-   "ml_away": 195.0,
-   "ml_home": -238.0,
-   "over_price": -115.0,
+   "ml_away": 190.0,
+   "ml_home": -230.0,
+   "over_price": -105.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -3554,8 +3554,8 @@
    "spread_home": -5.5,
    "spread_price_away": -110.0,
    "spread_price_home": -110.0,
-   "total": 41.5,
-   "under_price": -105.0
+   "total": 42.5,
+   "under_price": -115.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3654,8 +3654,8 @@
    "book": "DraftKings",
    "details": "LAC -7",
    "keyless": true,
-   "ml_away": 240.0,
-   "ml_home": -298.0,
+   "ml_away": 245.0,
+   "ml_home": -305.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
@@ -3822,8 +3822,8 @@
    "book": "DraftKings",
    "details": "DAL -3.5",
    "keyless": true,
-   "ml_away": 180.0,
-   "ml_home": -218.0,
+   "ml_away": 185.0,
+   "ml_home": -225.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -3934,8 +3934,8 @@
    "book": "DraftKings",
    "details": "LAR -7",
    "keyless": true,
-   "ml_away": 275.0,
-   "ml_home": -345.0,
+   "ml_away": 280.0,
+   "ml_home": -355.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
