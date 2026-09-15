@@ -3014,12 +3014,12 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
-  "away_score": 0,
+  "away_score": 10,
   "broadcast": "ESPN/ABC",
-  "completed": false,
+  "completed": true,
   "date_utc": "2026-09-15T00:15Z",
   "game_id": "401872931",
   "home": {
@@ -3028,10 +3028,10 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
-  "home_score": 0,
+  "home_score": 31,
   "indoor": false,
   "name": "DEN @ KC",
   "neutral": false,
@@ -3056,8 +3056,8 @@
   },
   "season": 2026,
   "season_type": 2,
-  "state": "in",
-  "status_detail": "12:20 - 1st",
+  "state": "post",
+  "status_detail": "Final",
   "venue": "Arrowhead Stadium",
   "venue_city": "Kansas City",
   "venue_state": "MO",
@@ -3153,7 +3153,7 @@
    "keyless": true,
    "ml_away": -125.0,
    "ml_home": 105.0,
-   "over_price": -105.0,
+   "over_price": -118.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -3163,8 +3163,8 @@
    "spread_home": 1.5,
    "spread_price_away": -108.0,
    "spread_price_home": -112.0,
-   "total": 44.5,
-   "under_price": -115.0
+   "total": 43.5,
+   "under_price": -102.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3207,8 +3207,8 @@
    "book": "DraftKings",
    "details": "HOU -3",
    "keyless": true,
-   "ml_away": 130.0,
-   "ml_home": -155.0,
+   "ml_away": 124.0,
+   "ml_home": -148.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -3217,8 +3217,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -3.0,
-   "spread_price_away": -112.0,
-   "spread_price_home": -108.0,
+   "spread_price_away": -115.0,
+   "spread_price_home": -105.0,
    "total": 46.5,
    "under_price": -112.0
   },
@@ -3263,8 +3263,8 @@
    "book": "DraftKings",
    "details": "TB -8.5",
    "keyless": true,
-   "ml_away": 295.0,
-   "ml_home": -375.0,
+   "ml_away": 285.0,
+   "ml_home": -360.0,
    "over_price": -115.0,
    "priced_markets": [
     "ML",
@@ -3319,8 +3319,8 @@
    "book": "DraftKings",
    "details": "GB -4.5",
    "keyless": true,
-   "ml_away": -225.0,
-   "ml_home": 185.0,
+   "ml_away": -205.0,
+   "ml_home": 170.0,
    "over_price": -112.0,
    "priced_markets": [
     "ML",
@@ -3329,8 +3329,8 @@
    ],
    "source": "ESPN public feed",
    "spread_home": 4.5,
-   "spread_price_away": -108.0,
-   "spread_price_home": -112.0,
+   "spread_price_away": -102.0,
+   "spread_price_home": -118.0,
    "total": 44.5,
    "under_price": -108.0
   },
@@ -3375,9 +3375,9 @@
    "book": "DraftKings",
    "details": "CHI -5.5",
    "keyless": true,
-   "ml_away": 180.0,
-   "ml_home": -218.0,
-   "over_price": -108.0,
+   "ml_away": 190.0,
+   "ml_home": -230.0,
+   "over_price": -102.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -3388,7 +3388,7 @@
    "spread_price_away": -110.0,
    "spread_price_home": -110.0,
    "total": 49.5,
-   "under_price": -112.0
+   "under_price": -118.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3433,7 +3433,7 @@
    "keyless": true,
    "ml_away": 285.0,
    "ml_home": -360.0,
-   "over_price": -102.0,
+   "over_price": -118.0,
    "priced_markets": [
     "ML",
     "TOTAL"
@@ -3443,7 +3443,7 @@
    "spread_price_away": null,
    "spread_price_home": -110.0,
    "total": 47.5,
-   "under_price": -118.0
+   "under_price": -102.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3587,7 +3587,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -3598,9 +3598,9 @@
    "book": "DraftKings",
    "details": "DEN -2.5",
    "keyless": true,
-   "ml_away": 124.0,
-   "ml_home": -148.0,
-   "over_price": -115.0,
+   "ml_away": 114.0,
+   "ml_home": -135.0,
+   "over_price": -102.0,
    "priced_markets": [
     "ML",
     "ATS",
@@ -3608,10 +3608,10 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -2.5,
-   "spread_price_away": -102.0,
-   "spread_price_home": -118.0,
+   "spread_price_away": -110.0,
+   "spread_price_home": -110.0,
    "total": 44.5,
-   "under_price": -105.0
+   "under_price": -118.0
   },
   "season": 2026,
   "season_type": 2,
@@ -3710,8 +3710,8 @@
    "book": "DraftKings",
    "details": "SF -13.5",
    "keyless": true,
-   "ml_away": 650.0,
-   "ml_home": -1000.0,
+   "ml_away": 625.0,
+   "ml_home": -950.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -3822,8 +3822,8 @@
    "book": "DraftKings",
    "details": "DAL -3.5",
    "keyless": true,
-   "ml_away": 170.0,
-   "ml_home": -205.0,
+   "ml_away": 180.0,
+   "ml_home": -218.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -3867,7 +3867,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -3878,8 +3878,8 @@
    "book": "DraftKings",
    "details": "KC -6.5",
    "keyless": true,
-   "ml_away": 235.0,
-   "ml_home": -290.0,
+   "ml_away": 250.0,
+   "ml_home": -310.0,
    "over_price": -110.0,
    "priced_markets": [
     "ML",
@@ -3888,9 +3888,9 @@
    ],
    "source": "ESPN public feed",
    "spread_home": -6.5,
-   "spread_price_away": -110.0,
-   "spread_price_home": -110.0,
-   "total": 48.5,
+   "spread_price_away": 100.0,
+   "spread_price_home": -120.0,
+   "total": 47.5,
    "under_price": -110.0
   },
   "season": 2026,
@@ -3934,8 +3934,8 @@
    "book": "DraftKings",
    "details": "LAR -7",
    "keyless": true,
-   "ml_away": 280.0,
-   "ml_home": -355.0,
+   "ml_away": 275.0,
+   "ml_home": -345.0,
    "over_price": -108.0,
    "priced_markets": [
     "ML",
@@ -4189,7 +4189,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -4763,7 +4763,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -5477,7 +5477,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -5533,7 +5533,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -6261,7 +6261,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -6611,7 +6611,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -7227,7 +7227,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -7885,7 +7885,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -8053,7 +8053,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -8725,7 +8725,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -8739,7 +8739,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -9173,7 +9173,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -9411,7 +9411,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -10125,7 +10125,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -10643,7 +10643,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -11091,7 +11091,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -11469,7 +11469,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -11525,7 +11525,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -12197,7 +12197,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -12659,7 +12659,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -13149,7 +13149,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -13541,7 +13541,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -14549,7 +14549,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -14675,7 +14675,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -14843,7 +14843,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
@@ -15459,7 +15459,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -15669,7 +15669,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "away_score": 0,
@@ -15725,7 +15725,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "away_score": 0,
@@ -16858,7 +16858,7 @@
    "id": "12",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
    "name": "Kansas City Chiefs",
-   "record": "0-0",
+   "record": "1-0",
    "short": "Chiefs"
   },
   "home_score": 0,
@@ -16914,7 +16914,7 @@
    "id": "7",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
    "name": "Denver Broncos",
-   "record": "0-0",
+   "record": "0-1",
    "short": "Broncos"
   },
   "home_score": 0,
