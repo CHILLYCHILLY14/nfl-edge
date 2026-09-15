@@ -3638,7 +3638,7 @@
   "week": 2
  },
  "401872938:ML:away": {
-  "closing_tier": "PASS",
+  "closing_tier": "BEST BET",
   "confidence": 0.5,
   "edge": 0.0186,
   "edge_raw": 0.0194,
@@ -4688,7 +4688,7 @@
   "week": 2
  },
  "401872945:ML:away": {
-  "closing_tier": "BEST BET",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0349,
   "edge_raw": 0.0412,
@@ -5338,7 +5338,7 @@
   "week": 3
  },
  "401872949:TOTAL:over": {
-  "closing_tier": "GOOD",
+  "closing_tier": "BEST BET",
   "confidence": 0.5,
   "edge": -0.0134,
   "edge_raw": -0.0136,
@@ -7763,7 +7763,7 @@
   "week": 4
  },
  "401872965:TOTAL:under": {
-  "closing_tier": "PASS",
+  "closing_tier": "GOOD",
   "confidence": 0.5,
   "edge": 0.0537,
   "edge_raw": 0.121,
@@ -8663,7 +8663,7 @@
   "week": 4
  },
  "401872971:TOTAL:under": {
-  "closing_tier": "GOOD",
+  "closing_tier": "PASS",
   "confidence": 0.5,
   "edge": 0.0545,
   "edge_raw": 0.1456,
